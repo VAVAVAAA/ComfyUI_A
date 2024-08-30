@@ -1,4 +1,7 @@
 import os
+os.system('sudo apt-get update')
+os.system('sudo apt-get install -y aria2')
+
 os.system(f"git lfs install")
 # os.system(f"git clone https://github.com/comfyanonymous/ComfyUI /home/xlab-app-center/ComfyUI")
 os.chdir(f"/home/xlab-app-center")
