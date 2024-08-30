@@ -1,6 +1,8 @@
 import os
-os.system("apt-get update")
-os.system("apt-get install -y sudo git git-lfs aria2")
+import shutil
+os.system("sudo apt-get update")
+os.system("sudo apt-get install -y git git-lfs aria2")
+
 os.system(f"git lfs install")
 # os.system(f"git clone https://github.com/comfyanonymous/ComfyUI /home/xlab-app-center/ComfyUI")
 os.chdir(f"/home/xlab-app-center")
