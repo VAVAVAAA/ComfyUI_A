@@ -5,7 +5,7 @@ os.chdir(f"/home/xlab-app-center")
 # os.system(f"git lfs install")
 # os.system(f"git lfs update")
 # os.system(f"git clone https://github.com/comfyanonymous/ComfyUI /home/xlab-app-center/ComfyUI")
-# os.system(f"pip install -r requirements.txt")
+os.system(f"pip install -r requirements.txt")
 # 插件
 os.system(f"git clone https://github.com/ltdrdata/ComfyUI-Manager /home/xlab-app-center/custom_nodes/ComfyUI-Manager")
 os.system(f"git clone https://github.com/ty0x2333/ComfyUI-Dev-Utils /home/xlab-app-center/custom_nodes")
