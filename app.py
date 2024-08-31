@@ -9,8 +9,8 @@ os.chdir(f"/home/xlab-app-center")
 # 插件
 os.system(f"git clone https://github.com/ltdrdata/ComfyUI-Manager /home/xlab-app-center/custom_nodes/ComfyUI-Manager")
 os.system(f"git clone https://github.com/ty0x2333/ComfyUI-Dev-Utils /home/xlab-app-center/custom_nodes/ComfyUI-Dev-Utils")
-os.system(f"git clone https://github.com/Nuked88/ComfyUI-N-Sidebar /home/xlab-app-center/custom_nodes")
-os.system(f"git clone https://github.com/AIGODLIKE/AIGODLIKE-ComfyUI-Translation /home/xlab-app-center/custom_nodes")
+os.system(f"git clone https://github.com/Nuked88/ComfyUI-N-Sidebar /home/xlab-app-center/custom_nodes/ComfyUI-N-Sidebar")
+os.system(f"git clone https://github.com/AIGODLIKE/AIGODLIKE-ComfyUI-Translation /home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation")
 
 
 # 模型
