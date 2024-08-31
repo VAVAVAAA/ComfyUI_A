@@ -1,11 +1,10 @@
 import os
 import shutil
-os.system("sudo apt-get update")
-os.system("sudo apt-get install -y git git-lfs aria2")
 
-os.system(f"git lfs install")
-# os.system(f"git clone https://github.com/comfyanonymous/ComfyUI /home/xlab-app-center/ComfyUI")
 os.chdir(f"/home/xlab-app-center")
+# os.system(f"git lfs install")
+# os.system(f"git lfs update")
+# os.system(f"git clone https://github.com/comfyanonymous/ComfyUI /home/xlab-app-center/ComfyUI")
 # os.system(f"pip install -r requirements.txt")
 os.system(f"git clone https://github.com/ltdrdata/ComfyUI-Manager /home/xlab-app-center/custom_nodes/ComfyUI-Manager")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors?download=true -d /home/xlab-app-center/models/checkpoints -o flux1-dev-fp8.safetensors")
