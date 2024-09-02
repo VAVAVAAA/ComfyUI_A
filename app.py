@@ -3,6 +3,7 @@ import shutil
 
 os.system("pip install --upgrade transformers==4.44.2")
 os.system("pip install --upgrade torch==2.1.0 torchvision==0.16.0")
+
 os.system("pip install aiohttp_sse")
 os.system("pip install segment_anything")
 os.system("pip install opencv-python")
