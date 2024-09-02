@@ -1,14 +1,20 @@
 import os
 import shutil
-
+# 环境
 os.system("pip install --upgrade transformers==4.44.2")
 os.system("pip install --upgrade torch==2.1.0 torchvision==0.16.0")
-
+# 依赖
 os.system("pip install aiohttp_sse")
 os.system("pip install segment_anything")
 os.system("pip install opencv-python")
 os.system("pip install transparent_background")
 os.system("pip install aiohttp_sse")
+os.system("pip install rembg")
+# 数据集下载
+os.system("pip install openxlab")
+os.system("pip install -U openxlab")
+import openxlab
+openxlab.login(ak=<xa5ag8yyvwpqkxw839pw>, sk=<l8njwnadbjgdwxe1zn83olme31xpparlo2q7vkmo>)
 
 os.chdir(f"/home/xlab-app-center")
 # 插件
@@ -38,6 +44,8 @@ os.system(f"git clone https://github.com/lucataco/cog-flux-controlnet-union-pro 
 
 
 # 模型
+from openxlab.dataset import download
+download(dataset_repo='mofashi/comfy',source_path='/VectorJourney丨假装去旅游_v1.0.safetensors', target_path='/home/xlab-app-center/models/loras') #数据集文件下载
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors?download=true -d /home/xlab-app-center/models/checkpoints -o flux1-dev-fp8.safetensors")
 # os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://civitai.com/api/download/models/782002 -d /home/xlab-app-center/models/checkpoints -o Jugg_Xl_by_RunDiffusion.safetensors")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://download.openxlab.org.cn/models/ninjawick/realistic-vision-5.1/weight//Realistic_Vision_V6.0_NV_B1_inpainting.safetensors -d /home/xlab-app-center/models/checkpoints -o Realistic_Vision_V6.0_NV_B1_inpainting.safetensors")
