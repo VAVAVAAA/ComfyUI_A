@@ -46,6 +46,7 @@ os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=fa
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/ByteDance/Hyper-SD/resolve/main/Hyper-FLUX.1-dev-16steps-lora.safetensors?download=true -d /home/xlab-app-center/models/lora -o Hyper-FLUX.1-dev-16steps-lora.safetensors")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/ByteDance/Hyper-SD/resolve/main/Hyper-FLUX.1-dev-8steps-lora.safetensors?download=true -d /home/xlab-app-center/models/lora -o Hyper-FLUX.1-dev-8steps-lora.safetensors")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/Shakker-Labs/FLUX.1-dev-LoRA-blended-realistic-illustration/resolve/main/FLUX-dev-lora-blended_realistic_illustration.safetensors?download=true -d /home/xlab-app-center/models/lora -o A_写实插画结合_flux.safetensors")
+os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/Shakker-Labs/FLUX.1-dev-LoRA-add-details/resolve/main/FLUX-dev-lora-add_details.safetensors?download=true -d /home/xlab-app-center/models/lora -o FLUX-dev-lora-add_details增加细节.safetensors")
 
 # controlnet
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors?download=true -d /home/xlab-app-center/models/controlnet -o FLUX.1-dev-ControlNet-Union-Pro.safetensors")
