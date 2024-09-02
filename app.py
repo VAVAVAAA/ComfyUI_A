@@ -33,7 +33,7 @@ os.system(f"git clone https://github.com/ssitu/ComfyUI_UltimateSDUpscale /home/x
 
 os.system(f"git clone https://github.com/cubiq/ComfyUI_IPAdapter_plus /home/xlab-app-center/custom_nodes/ComfyUI_IPAdapter_plus")
 os.system(f"git clone https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite /home/xlab-app-center/custom_nodes/ComfyUI-VideoHelperSuite")
-os.system(f"git clone https://github.com/Nourepide/ComfyUI-Allor /home/xlab-app-center/custom_nodes/ComfyUI-Allor") # 硬件性能检测
+os.system(f"git clone https://gitcode.com/gh_mirrors/co/ComfyUI-Allor /home/xlab-app-center/custom_nodes/ComfyUI-Allor") # 硬件性能检测
 os.system(f"git clone https://github.com/lucataco/cog-flux-controlnet-union-pro /home/xlab-app-center/custom_nodes/cog-flux-controlnet-union-pro") # flux的全能cn
 
 
