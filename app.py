@@ -10,6 +10,7 @@ os.system("pip install opencv-python")
 os.system("pip install transparent_background")
 os.system("pip install aiohttp_sse")
 os.system("pip install rembg")
+os.system("pip install piexif")
 
 os.chdir(f"/home/xlab-app-center")
 # 插件
