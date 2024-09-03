@@ -11,6 +11,7 @@ os.system("pip install transparent_background")
 os.system("pip install aiohttp_sse")
 os.system("pip install rembg")
 os.system("pip install piexif")
+os.system("pip install accelerate>=0.25.0")
 
 os.chdir(f"/home/xlab-app-center")
 # 插件
