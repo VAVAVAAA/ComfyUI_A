@@ -3,6 +3,8 @@ import shutil
 # 环境
 os.system("pip install --upgrade transformers==4.44.2")
 os.system("pip install --upgrade torch==2.1.0 torchvision==0.16.0")
+os.system("pip install --upgrade huggingface_hub")
+os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 # 依赖
 os.system("pip install aiohttp_sse")
 os.system("pip install segment_anything")
@@ -37,7 +39,7 @@ os.system(f"git clone https://github.com/ssitu/ComfyUI_UltimateSDUpscale /home/x
 os.system(f"git clone https://github.com/cubiq/ComfyUI_IPAdapter_plus /home/xlab-app-center/custom_nodes/ComfyUI_IPAdapter_plus")
 os.system(f"git clone https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite /home/xlab-app-center/custom_nodes/ComfyUI-VideoHelperSuite")
 os.system(f"git clone https://gitcode.com/gh_mirrors/co/ComfyUI-Allor /home/xlab-app-center/custom_nodes/ComfyUI-Allor") # 硬件性能检测
-os.system(f"git clone https://github.com/lucataco/cog-flux-controlnet-union-pro /home/xlab-app-center/custom_nodes/cog-flux-controlnet-union-pro") # flux的全能cn
+os.system(f"git clone https://github.com/StartHua/Comfyui_CXH_joy_caption  /home/xlab-app-center/custom_nodes/Comfyui_CXH_joy_caption") # 支持多个视觉反推模型
 
 
 # 模型
@@ -52,6 +54,8 @@ os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=fa
 
 # controlnet
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors?download=true -d /home/xlab-app-center/models/controlnet -o FLUX.1-dev-ControlNet-Union-Pro.safetensors")
+# 反推模型
+os.system("huggingface-cli download --repo-type dataset --resume-download google/siglip-so400m-patch14-384 --local-dir /home/xlab-app-center/models/clip/siglip-so400m-patch14-384")
 
 
 os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
