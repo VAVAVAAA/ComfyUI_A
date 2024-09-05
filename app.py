@@ -56,7 +56,7 @@ os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=fa
 # controlnet
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors?download=true -d /home/xlab-app-center/models/controlnet -o FLUX.1-dev-ControlNet-Union-Pro.safetensors")
 # 反推模型
-os.system("huggingface-cli download --resume-download bigscience/bloom-560m --local-dir /home/xlab-app-center/models/clip/siglip-so400m-patch14-384")
+os.system("huggingface-cli download --resume-download google/siglip-so400m-patch14-384 --local-dir /home/xlab-app-center/models/clip/siglip-so400m-patch14-384")
 # os.system("./hfd.sh google/siglip-so400m-patch14-384 --tool aria2c -x 16 -d /home/xlab-app-center/models/clip/siglip-so400m-patch14-384")
 
 
