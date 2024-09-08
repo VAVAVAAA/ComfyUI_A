@@ -3,8 +3,8 @@ import shutil
 # 环境
 os.system("pip install --upgrade transformers==4.44.2")
 os.system("pip install --upgrade torch==2.1.2 torchvision==0.16.0")
-os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
-os.system("pip install --upgrade huggingface_hub")
+# os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
+# os.system("pip install --upgrade huggingface_hub")
 
 
 # 依赖
@@ -42,6 +42,7 @@ os.system(f"git clone https://git.homegu.com/cubiq/ComfyUI_IPAdapter_plus /home/
 os.system(f"git clone https://git.homegu.com/Kosinkadink/ComfyUI-VideoHelperSuite /home/xlab-app-center/custom_nodes/ComfyUI-VideoHelperSuite")
 os.system(f"git clone https://git.homegu.com/Nourepide/ComfyUI-Allor /home/xlab-app-center/custom_nodes/ComfyUI-Allor") # 硬件性能检测
 os.system(f"git clone https://git.homegu.com/StartHua/Comfyui_CXH_joy_caption  /home/xlab-app-center/custom_nodes/Comfyui_CXH_joy_caption") # 支持多个视觉反推模型
+os.system(f"git clone https://git.homegu.com/miaoshouai/ComfyUI-Miaoshouai-Tagger /home/xlab-app-center/custom_nodes/ComfyUI-Miaoshouai-Tagger") # 全新的视觉反推模型，显存更小
 
 
 # 模型
@@ -58,8 +59,8 @@ os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=fa
 # controlnet
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors?download=true -d /home/xlab-app-center/models/controlnet -o FLUX.1-dev-ControlNet-Union-Pro.safetensors")
 # 反推模型
-os.system("huggingface-cli download --resume-download google/siglip-so400m-patch14-384 --local-dir /home/xlab-app-center/models/clip/siglip-so400m-patch14-384")
-# os.system("./hfd.sh google/siglip-so400m-patch14-384 --tool aria2c -x 16 -d /home/xlab-app-center/models/clip/siglip-so400m-patch14-384")
+# os.system("huggingface-cli download --resume-download google/siglip-so400m-patch14-384 --local-dir /home/xlab-app-center/models/clip/siglip-so400m-patch14-384")
+os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://huggingface.co/MiaoshouAI/Florence-2-large-PromptGen-v1.5/resolve/main/model.safetensors?download=true -d /home/xlab-app-center/models/LLM -o Florence-2-large-PromptGen-v1.5.safetensors")
 
 
 os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
