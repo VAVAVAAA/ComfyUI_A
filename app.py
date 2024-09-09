@@ -54,15 +54,21 @@ os.system(f"git clone https://git.homegu.com/pythongosssss/ComfyUI-Custom-Script
 
 # 模型
 # 下载数据集文件
-download(
-    dataset_repo='mofashi/comfy',  # 数据集仓库路径
-    source_path='VectorJourney丨假装去旅游_v1.0.safetensors',   # 数据集中要下载的文件路径
-    target_path='/home/xlab-app-center/models/loras'  # 本地保存的文件路径
-)
+# download(
+#     dataset_repo='mofashi/comfy',  # 数据集仓库路径
+#     source_path='VectorJourney丨假装去旅游_v1.0.safetensors',   # 数据集中要下载的文件路径
+#     target_path='/home/xlab-app-center/models/loras'  # 本地保存的文件路径
+# )
+
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/unet/{file_name}') 
+ for file_name in [
+     'ketu_fp16.safetensors', 
+ ]]
+
 os.chdir(f"/home/xlab-app-center/models/checkpoints")
-os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8.safetensors?ref=main&nonce=1725766880738 -d ./models/checkpoints -o flux1-dev-fp8.safetensors")
-# os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors?download=true -d /home/xlab-app-center/models/checkpoints -o flux1-dev-fp8.safetensors")
-# os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://civitai.com/api/download/models/782002 -d /home/xlab-app-center/models/checkpoints -o Jugg_Xl_by_RunDiffusion.safetensors")
+# os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8.safetensors?ref=main&nonce=1725766880738  -o flux1-dev-fp8.safetensors")
 # os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://download.openxlab.org.cn/models/ninjawick/realistic-vision-5.1/weight//Realistic_Vision_V6.0_NV_B1_inpainting.safetensors -d /home/xlab-app-center/models/checkpoints -o Realistic_Vision_V6.0_NV_B1_inpainting.safetensors")
 # lora
 # os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/ByteDance/Hyper-SD/resolve/main/Hyper-FLUX.1-dev-16steps-lora.safetensors?download=true -d /home/xlab-app-center/models/loras -o Hyper-FLUX.1-dev-16steps-lora.safetensors")
