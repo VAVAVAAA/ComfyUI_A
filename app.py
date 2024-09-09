@@ -9,7 +9,7 @@ os.system("pip install --upgrade torch==2.1.2 torchvision==0.16.0")
 
 os.system("pip install openxlab")
 os.system("pip install -U openxlab")
-openxlab.login(ak=<xa5ag8yyvwpqkxw839pw>, sk=<l8njwnadbjgdwxe1zn83olme31xpparlo2q7vkmo>)
+openxlab.login(ak='xa5ag8yyvwpqkxw839pw', sk='l8njwnadbjgdwxe1zn83olme31xpparlo2q7vkmo')
 
 # 依赖
 os.system("pip install aiohttp_sse")
