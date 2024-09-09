@@ -1,11 +1,15 @@
 import os
 import shutil
+import openxlab
 # 环境
 os.system("pip install --upgrade transformers==4.44.2")
 os.system("pip install --upgrade torch==2.1.2 torchvision==0.16.0")
 # os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 # os.system("pip install --upgrade huggingface_hub")
 
+os.system("pip install openxlab")
+os.system("pip install -U openxlab")
+openxlab.login(ak=<xa5ag8yyvwpqkxw839pw>, sk=<l8njwnadbjgdwxe1zn83olme31xpparlo2q7vkmo>)
 
 # 依赖
 os.system("pip install aiohttp_sse")
@@ -48,6 +52,12 @@ os.system(f"git clone https://git.homegu.com/pythongosssss/ComfyUI-Custom-Script
 
 
 # 模型
+# 下载数据集文件
+download(
+    dataset_repo='mofashi/comfy',  # 数据集仓库路径
+    source_path='VectorJourney丨假装去旅游_v1.0.safetensors',   # 数据集中要下载的文件路径
+    target_path='/home/xlab-app-center/models/loras'  # 本地保存的文件路径
+)
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8.safetensors?ref=main&nonce=1725766880738 -d /home/xlab-app-center/models/checkpoints -o flux1-dev-fp8.safetensors")
 # os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors?download=true -d /home/xlab-app-center/models/checkpoints -o flux1-dev-fp8.safetensors")
 # os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://civitai.com/api/download/models/782002 -d /home/xlab-app-center/models/checkpoints -o Jugg_Xl_by_RunDiffusion.safetensors")
