@@ -4,7 +4,7 @@ import openxlab
 from openxlab.dataset import download
 # 环境
 os.system("pip install --upgrade transformers==4.44.2")
-os.system("pip install --upgrade torch==2.1.2 torchvision==0.16.0")
+os.system("pip install --upgrade torch==2.1.0 torchvision==0.16.0")
 # os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 # os.system("pip install --upgrade huggingface_hub")
 
