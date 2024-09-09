@@ -5,8 +5,6 @@ from openxlab.dataset import download
 # 环境
 os.system("pip install --upgrade transformers==4.44.2")
 os.system("pip install --upgrade torch==2.1.0 torchvision==0.16.0")
-# os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
-# os.system("pip install --upgrade huggingface_hub")
 
 os.system("pip install openxlab")
 os.system("pip install -U openxlab")
@@ -17,7 +15,6 @@ os.system("pip install aiohttp_sse")
 os.system("pip install segment_anything")
 os.system("pip install opencv-python")
 os.system("pip install transparent_background")
-# os.system("pip install aiohttp_sse")
 os.system("pip install rembg")
 os.system("pip install piexif")
 os.system("pip install accelerate>=0.25.0")
@@ -66,6 +63,14 @@ os.system(f"git clone https://git.homegu.com/pythongosssss/ComfyUI-Custom-Script
  for file_name in [
      'ketu_fp16.safetensors', 
  ]]
+
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/vae/{file_name}') 
+ for file_name in [
+     'ketu_fp16.safetensors', 
+ ]]
+
 
 os.chdir(f"/home/xlab-app-center/models/checkpoints")
 # os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8.safetensors?ref=main&nonce=1725766880738  -o flux1-dev-fp8.safetensors")
