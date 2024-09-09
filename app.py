@@ -76,7 +76,7 @@ os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=fa
 # os.system("huggingface-cli download --resume-download google/siglip-so400m-patch14-384 --local-dir /home/xlab-app-center/models/clip/siglip-so400m-patch14-384")
 # os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://huggingface.co/MiaoshouAI/Florence-2-large-PromptGen-v1.5/resolve/main/model.safetensors?download=true -d /home/xlab-app-center/models/LLM -o Florence-2-large-PromptGen-v1.5.safetensors")
 
-
+os.chdir(f"/home/xlab-app-center")
 os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
 #os.system(f"python main.py --dont-print-server --listen 0.0.0.0 --port 7860 --enable-cors-header")
 
