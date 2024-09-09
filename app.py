@@ -17,7 +17,7 @@ os.system("pip install rembg")
 os.system("pip install piexif")
 os.system("pip install accelerate>=0.25.0")
 
-os.chdir(f"/home/xlab-app-center")
+# os.chdir(f"/home/xlab-app-center")
 # 插件
 os.system(f"git clone https://git.homegu.com/ltdrdata/ComfyUI-Manager /home/xlab-app-center/custom_nodes/ComfyUI-Manager")
 os.system(f"git clone https://git.homegu.com/ty0x2333/ComfyUI-Dev-Utils /home/xlab-app-center/custom_nodes/ComfyUI-Dev-Utils") # 显示节点运行时间
