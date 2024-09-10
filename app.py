@@ -2,6 +2,7 @@ import os
 import shutil
 import openxlab
 from openxlab.dataset import download
+import subprocess
 # 环境
 os.system("pip install --upgrade transformers==4.44.2")
 # os.system("pip install --upgrade torch==2.1.2")
