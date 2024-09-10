@@ -47,47 +47,56 @@ os.system(f"git clone https://git.homegu.com/StartHua/Comfyui_CXH_joy_caption  /
 os.system(f"git clone https://git.homegu.com/miaoshouai/ComfyUI-Miaoshouai-Tagger /home/xlab-app-center/custom_nodes/ComfyUI-Miaoshouai-Tagger") # 全新的视觉反推模型，显存更小
 
 os.system(f"git clone https://git.homegu.com/pythongosssss/ComfyUI-Custom-Scripts /home/xlab-app-center/custom_nodes/ComfyUI-Custom-Scripts")
-
-
-# 模型
-# 下载数据集文件
-# download(
-#     dataset_repo='mofashi/comfy',  # 数据集仓库路径
-#     source_path='VectorJourney丨假装去旅游_v1.0.safetensors',   # 数据集中要下载的文件路径
-#     target_path='/home/xlab-app-center/models/loras'  # 本地保存的文件路径
-# )
-
+# unet模型
 [download(dataset_repo='mofashi/comfy', 
           source_path=file_name, 
           target_path=f'/home/xlab-app-center/models/unet/{file_name}') 
  for file_name in [
      'ketu_fp16.safetensors', 
  ]]
-
+# lora
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/loras/{file_name}') 
+ for file_name in [
+     'Hyper-FLUX.1-dev-8steps-lora.safetensors', 
+ ]]
+# vae
 [download(dataset_repo='mofashi/comfy', 
           source_path=file_name, 
           target_path=f'/home/xlab-app-center/models/vae/{file_name}') 
  for file_name in [
-     'ketu_fp16.safetensors', 
+     'ketu_vae_fp16.safetensors', 
+ ]]
+# clip模型
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/clip/{file_name}') 
+ for file_name in [
+     'ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors', 
+     'clip_l.safetensors',
+     't5xxl_fp8_e4m3fn.safetensors'
+ ]]
+# 视觉识别模型&大语言模型
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/LLM/{file_name}') 
+ for file_name in [
+     'Florence_2_large_PromptGen.safetensors'
  ]]
 
+# 大模型
+os.chdir(f"/home/xlab-app-center/models/checkpoints") #文件夹
 
-os.chdir(f"/home/xlab-app-center/models/checkpoints")
-# os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8.safetensors?ref=main&nonce=1725766880738  -o flux1-dev-fp8.safetensors")
-# os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://download.openxlab.org.cn/models/ninjawick/realistic-vision-5.1/weight//Realistic_Vision_V6.0_NV_B1_inpainting.safetensors -d /home/xlab-app-center/models/checkpoints -o Realistic_Vision_V6.0_NV_B1_inpainting.safetensors")
-# lora
-# os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/ByteDance/Hyper-SD/resolve/main/Hyper-FLUX.1-dev-16steps-lora.safetensors?download=true -d /home/xlab-app-center/models/loras -o Hyper-FLUX.1-dev-16steps-lora.safetensors")
-#os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/ByteDance/Hyper-SD/resolve/main/Hyper-FLUX.1-dev-8steps-lora.safetensors?download=true -d /home/xlab-app-center/models/loras -o Hyper-FLUX.1-dev-8steps-lora.safetensors")
-#os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/Shakker-Labs/FLUX.1-dev-LoRA-blended-realistic-illustration/resolve/main/FLUX-dev-lora-blended_realistic_illustration.safetensors?download=true -d /home/xlab-app-center/models/loras -o A_写实插画结合_flux.safetensors")
-#os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/Shakker-Labs/FLUX.1-dev-LoRA-add-details/resolve/main/FLUX-dev-lora-add_details.safetensors?download=true -d /home/xlab-app-center/models/loras -o FLUX-dev-lora-add_details增加细节.safetensors")
+os.chdir(f"/home/xlab-app-center/models/unet") # 文件夹
+os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8%E5%8E%9F%E5%A7%8B.safetensors?ref=main&nonce=1725931610381  -o flux1-dev-fp8.safetensors")
 
-# controlnet
-# os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors?download=true -d /home/xlab-app-center/models/controlnet -o FLUX.1-dev-ControlNet-Union-Pro.safetensors")
-# 反推模型
-# os.system("huggingface-cli download --resume-download google/siglip-so400m-patch14-384 --local-dir /home/xlab-app-center/models/clip/siglip-so400m-patch14-384")
-# os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://huggingface.co/MiaoshouAI/Florence-2-large-PromptGen-v1.5/resolve/main/model.safetensors?download=true -d /home/xlab-app-center/models/LLM -o Florence-2-large-PromptGen-v1.5.safetensors")
 
-os.chdir(f"/home/xlab-app-center")
+os.chdir(f"/home/xlab-app-center/models/LLM") # 文件夹
+os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/chatglm3-8bit.safetensors?ref=main&nonce=1725936486503  -o chatglm3-8bit.safetensors")
+
+
+os.chdir(f"/home/xlab-app-center")# 文件夹
 os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
 #os.system(f"python main.py --dont-print-server --listen 0.0.0.0 --port 7860 --enable-cors-header")
 
