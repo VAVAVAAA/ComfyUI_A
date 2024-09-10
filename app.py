@@ -67,6 +67,7 @@ os.system(f"git clone https://git.homegu.com/pythongosssss/ComfyUI-Custom-Script
           target_path=f'/home/xlab-app-center/models/vae/{file_name}') 
  for file_name in [
      'ketu_vae_fp16.safetensors', 
+     'flux_vae.safetensors'
  ]]
 # clip模型
 [download(dataset_repo='mofashi/comfy', 
