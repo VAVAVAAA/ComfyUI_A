@@ -102,12 +102,11 @@ os.system(f"git clone https://git.homegu.com/chrisgoringe/cg-image-picker /home/
 os.chdir(f"/home/xlab-app-center/models/checkpoints") #文件夹
 
 os.chdir(f"/home/xlab-app-center/models/unet") # 文件夹
-os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8%E5%8E%9F%E5%A7%8B.safetensors?ref=main&nonce=1725931610381  -o flux1-dev-fp8.safetensors")
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8.safetensors?ref=main&nonce=1725931610381 -o flux1-dev-fp8.safetensors")
 
 
 os.chdir(f"/home/xlab-app-center/models/LLM") # 文件夹
-os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/chatglm3-8bit.safetensors?ref=main&nonce=1725936486503  -o chatglm3-8bit.safetensors")
-
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/chatglm3-8bit.safetensors?ref=main&nonce=1725936486503 -o chatglm3-8bit.safetensors")
 
 os.chdir(f"/home/xlab-app-center")# 文件夹
 os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
