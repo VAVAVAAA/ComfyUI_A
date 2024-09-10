@@ -6,7 +6,8 @@ from openxlab.dataset import download
 os.system("pip install --upgrade transformers==4.44.2")
 # os.system("pip install --upgrade torch==2.1.2")
 os.system("pip install torchvision")
-os.system("pip install packaging==24.0")
+os.system("pip install packaging==23.0")
+
 
 os.system("pip install openxlab")
 os.system("pip install -U openxlab")
