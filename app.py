@@ -50,6 +50,13 @@ os.system(f"git clone https://git.homegu.com/StartHua/Comfyui_CXH_joy_caption  /
 os.system(f"git clone https://git.homegu.com/miaoshouai/ComfyUI-Miaoshouai-Tagger /home/xlab-app-center/custom_nodes/ComfyUI-Miaoshouai-Tagger") # 全新的视觉反推模型，显存更小
 
 os.system(f"git clone https://git.homegu.com/pythongosssss/ComfyUI-Custom-Scripts /home/xlab-app-center/custom_nodes/ComfyUI-Custom-Scripts")
+os.system(f"git clone https://git.homegu.com/melMass/comfy_mtb /home/xlab-app-center/custom_nodes/comfy_mtb")
+os.system(f"git clone https://git.homegu.com/chflame163/ComfyUI_LayerStyle /home/xlab-app-center/custom_nodes/ComfyUI_LayerStyle")
+os.system(f"git clone https://git.homegu.com/cubiq/ComfyUI_essentials /home/xlab-app-center/custom_nodes/ComfyUI_essentials")
+os.system(f"git clone https://git.homegu.com/chrisgoringe/cg-use-everywhere /home/xlab-app-center/custom_nodes/cg-use-everywhere")
+os.system(f"git clone https://git.homegu.com/chrisgoringe/cg-image-picker /home/xlab-app-center/custom_nodes/cg-image-picker")
+
+
 # unet模型
 [download(dataset_repo='mofashi/comfy', 
           source_path=file_name, 
