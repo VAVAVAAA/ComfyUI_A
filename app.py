@@ -96,7 +96,7 @@ os.system(f"git clone https://git.homegu.com/chrisgoringe/cg-image-picker /home/
           source_path=file_name, 
           target_path=f'/home/xlab-app-center/models/LLM/{file_name}') 
  for file_name in [
-     'Florence_2_large_PromptGen.safetensors'
+     'Florence-2-large-PromptGen.safetensors'
  ]]
 
 # 大模型
