@@ -100,10 +100,10 @@ os.system(f"git clone https://git.homegu.com/chrisgoringe/cg-image-picker /home/
  ]]
 
 # 大模型
-os.chdir(f"/home/xlab-app-center/models/checkpoints") #文件夹
+#os.chdir(f"/home/xlab-app-center/models/checkpoints") #文件夹
 
-# os.chdir(f"/home/xlab-app-center/models/unet") # 文件夹
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8.safetensors?ref=main&nonce=1725931610381 -o flux1-dev-fp8.safetensors",shell=True)
+os.chdir(f"/home/xlab-app-center/models/unet") # 文件夹
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8原始.safetensors?ref=main&nonce=1725931610381 -o flux1-dev-fp8原始.safetensors",shell=True)
 
 
 os.chdir(f"/home/xlab-app-center/models/LLM") # 文件夹
