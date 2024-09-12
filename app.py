@@ -5,9 +5,9 @@ from openxlab.dataset import download
 import subprocess
 # 环境
 os.system("pip install --upgrade transformers==4.44.2")
-#os.system("pip install --upgrade torch==2.1.2")
-os.system("pip install torchvision")
-os.system("pip install packaging==23.0")
+os.system("pip install torch==2.4.1")
+os.system("pip install --upgrade torchvision")
+os.system("pip install --upgrade packaging")
 
 
 os.system("pip install openxlab")
