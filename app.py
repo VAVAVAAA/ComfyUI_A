@@ -123,3 +123,8 @@ os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
 os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
 #os.system(f"python main.py --dont-print-server --listen 0.0.0.0 --port 7860 --enable-cors-header")
 
+os.system('python -c "import sys; print(f\'Python: {sys.version}\')"')
+os.system('python -c "import torch; print(f\'Torch: {torch.__version__}\'); print(f\'CUDA: {torch.cuda.is_available() and torch.version.cuda}\')"')
+os.system('python -c "import torchvision; print(f\'TorchVision: {torchvision.__version__}\')"')
+os.system('python -c "import torchaudio; print(f\'TorchAudio: {torchaudio.__version__}\')"')
+
