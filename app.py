@@ -74,7 +74,9 @@ os.system(f"git clone https://git.homegu.com/chrisgoringe/cg-image-picker /home/
  for file_name in [
      'Hyper-FLUX.1-dev-8steps-lora.safetensors', 
      'xl_99art写实摄影·光影光斑光晕增强.safetensors',
-     '绘梦摄影Flux复古胶片摄影时尚写真电影质感.safetensors'
+     '绘梦摄影Flux复古胶片摄影时尚写真电影质感.safetensors',
+     '墨幽-F.1-Lora-网图-MYH-1.1.safetensors',
+     '墨幽Flux-Lora-网图.safetensors'
  ]]
 # vae
 [download(dataset_repo='mofashi/comfy', 
@@ -102,11 +104,13 @@ os.system(f"git clone https://git.homegu.com/chrisgoringe/cg-image-picker /home/
  ]]
 
 # 大模型
-#os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
+# os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
 
 os.chdir(f"/home/xlab-app-center/models/unet") # 模型仓库，unet文件夹
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8原始.safetensors?ref=main&nonce=1725931610381 -o flux1-dev-fp8原始.safetensors",shell=True)
+# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8原始.safetensors?ref=main&nonce=1725931610381 -o flux1-dev-fp8原始.safetensors",shell=True)
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-Flux%E5%8E%9F%E9%9A%8F%E6%8B%8D-fp16-1.1.safetensors?ref=main&nonce=1726185742539 -o MYHuman-Flux原随拍-fp16-1.1.safetensors",shell=True)
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-F.1-%E5%8E%9F%E5%A2%A8%E5%B9%BD%E9%9A%8F%E6%8B%8D-v1-%E9%9A%8F%E6%8B%8D.safetensors?ref=main&nonce=1726204698330 -o flux1-dev-fp8原始.safetensors",shell=True)
+
 
 os.chdir(f"/home/xlab-app-center/models/loras") #模型仓库，lora文件夹
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/%E7%AD%91%E6%A2%A6F.1_INS%E6%BB%A4%E9%95%9C_v1.0.safetensors?ref=main&nonce=1726186206302 -o 筑梦F.1_INS滤镜_v1.0.safetensors",shell=True)
