@@ -6,8 +6,8 @@ import subprocess
 # 环境
 os.system("pip install --upgrade transformers==4.44.2")
 os.system("pip install torch==2.4.1")
-#os.system("pip install --upgrade torchvision")
-os.system('pip install torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124')
+os.system("pip install --upgrade torchvision")
+# os.system('pip install torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124')
 os.system("pip install --upgrade packaging")
 
 
@@ -52,6 +52,7 @@ os.system(f"git clone https://git.homegu.com/Kosinkadink/ComfyUI-VideoHelperSuit
 os.system(f"git clone https://git.homegu.com/Nourepide/ComfyUI-Allor /home/xlab-app-center/custom_nodes/ComfyUI-Allor") # 硬件性能检测
 os.system(f"git clone https://git.homegu.com/StartHua/Comfyui_CXH_joy_caption  /home/xlab-app-center/custom_nodes/Comfyui_CXH_joy_caption") # 支持多个视觉反推模型
 os.system(f"git clone https://git.homegu.com/miaoshouai/ComfyUI-Miaoshouai-Tagger /home/xlab-app-center/custom_nodes/ComfyUI-Miaoshouai-Tagger") # 全新的视觉反推模型，显存更小
+os.system(f"git clone https://git.homegu.com/siliconflow/BizyAir /home/xlab-app-center/custom_nodes/BizyAir") # 满血版反推
 
 os.system(f"git clone https://git.homegu.com/pythongosssss/ComfyUI-Custom-Scripts /home/xlab-app-center/custom_nodes/ComfyUI-Custom-Scripts")
 os.system(f"git clone https://git.homegu.com/melMass/comfy_mtb /home/xlab-app-center/custom_nodes/comfy_mtb")
@@ -122,9 +123,3 @@ subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dn
 os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
 os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
 #os.system(f"python main.py --dont-print-server --listen 0.0.0.0 --port 7860 --enable-cors-header")
-
-os.system('python -c "import sys; print(f\'Python: {sys.version}\')"')
-os.system('python -c "import torch; print(f\'Torch: {torch.__version__}\'); print(f\'CUDA: {torch.cuda.is_available() and torch.version.cuda}\')"')
-os.system('python -c "import torchvision; print(f\'TorchVision: {torchvision.__version__}\')"')
-os.system('python -c "import torchaudio; print(f\'TorchAudio: {torchaudio.__version__}\')"')
-
