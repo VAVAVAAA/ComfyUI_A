@@ -63,7 +63,13 @@ os.system(f"git clone https://git.homegu.com/ssitu/ComfyUI_UltimateSDUpscale /ho
 os.system(f"git clone https://git.homegu.com/M1kep/ComfyLiterals /home/xlab-app-center/custom_nodes/ComfyLiterals") # 字符串节点
 # os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-SUPIR /home/xlab-app-center/custom_nodes/ComfyUI-SUPIR")
 
-
+# 大模型
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/checkpoints/{file_name}') 
+ for file_name in [
+     'MYHuman-墨幽人造人15.safetensors'
+ ]]
 
 # unet模型
 [download(dataset_repo='mofashi/comfy', 
