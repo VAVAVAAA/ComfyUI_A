@@ -7,7 +7,6 @@ import subprocess
 os.system("pip install --upgrade transformers==4.44.2")
 os.system("pip install torch==2.4.1")
 os.system("pip install --upgrade torchvision")
-# os.system('pip install torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124')
 os.system("pip install --upgrade packaging")
 
 
