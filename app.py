@@ -144,7 +144,7 @@ os.system(f"git clone https://git.homegu.com/lquesada/ComfyUI-Inpaint-CropAndSti
           source_path=file_name, 
           target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
  for file_name in [
-     'FLUX.1-dev-Controlnet-Inpainting-Alpha.safetensors'
+     'FLUX-dev-Controlnet-Inpainting-Alpha.safetensors'
  ]]
 
 # 大模型
