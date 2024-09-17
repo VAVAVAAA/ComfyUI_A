@@ -140,6 +140,13 @@ os.system(f"git clone https://git.homegu.com/lquesada/ComfyUI-Inpaint-CropAndSti
      'face_yolov8m.pt'
  ]]
 
+[download(dataset_repo='mofashi/comfy2', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
+ for file_name in [
+     'FLUX.1-dev-Controlnet-Inpainting-Alpha.safetensors'
+ ]]
+
 # 大模型
 os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
 #subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-%E5%A2%A8%E5%B9%BD%E4%BA%BA%E9%80%A0%E4%BA%BAXL_v2010-Flux-RF.safetensors?ref=main&nonce=1726399393393 -o MYHuman-墨幽人造人XL-v2010-Flux-RF.safetensors",shell=True)
