@@ -143,12 +143,12 @@ os.system(f"git clone https://git.homegu.com/WASasquatch/was-node-suite-comfyui 
      'face_yolov8m.pt'
  ]]
 
-[download(dataset_repo='mofashi/comfy2', 
-          source_path=file_name, 
-          target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
- for file_name in [
-     'FLUX-dev-Controlnet-Inpainting-Alpha.safetensors'
- ]]
+# [download(dataset_repo='mofashi/comfy2', 
+#           source_path=file_name, 
+#           target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
+#  for file_name in [
+#      'FLUX-dev-Controlnet-Inpainting-Alpha.safetensors'
+#  ]]
 
 # 大模型
 os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
