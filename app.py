@@ -142,12 +142,21 @@ os.system(f"git clone https://git.homegu.com/WASasquatch/was-node-suite-comfyui 
  for file_name in [
      'face_yolov8m.pt'
  ]]
-
+# 数据集2-controlnet
+# [download(dataset_repo='mofashi/comfy2', 
+#           source_path=file_name, 
+#           target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
+#  for file_name in [
+#      'FLUX-dev-Controlnet-Inpainting-Alpha.safetensors'
+#  ]]
+# 数据集2- lora
 [download(dataset_repo='mofashi/comfy2', 
           source_path=file_name, 
-          target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
+          target_path=f'/home/xlab-app-center/models/loras/{file_name}') 
  for file_name in [
-     'FLUX-dev-Controlnet-Inpainting-Alpha.safetensors'
+     'Flux-小红书真实写真.safetensors',
+     '山水诗行_flux版',
+     '极氪白白酱Flux-人像V6MAX'
  ]]
 
 # 大模型
@@ -155,8 +164,8 @@ os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型�
 #subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-%E5%A2%A8%E5%B9%BD%E4%BA%BA%E9%80%A0%E4%BA%BAXL_v2010-Flux-RF.safetensors?ref=main&nonce=1726399393393 -o MYHuman-墨幽人造人XL-v2010-Flux-RF.safetensors",shell=True)
 
 os.chdir(f"/home/xlab-app-center/models/unet") # 模型仓库，unet文件夹
-# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8原始.safetensors?ref=main&nonce=1725931610381 -o flux1-dev-fp8原始.safetensors",shell=True)
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-Flux%E5%8E%9F%E9%9A%8F%E6%8B%8D-fp16-1.1.safetensors?ref=main&nonce=1726185742539 -o MYHuman-Flux原随拍-fp16-1.1.safetensors",shell=True)
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8原始.safetensors?ref=main&nonce=1725931610381 -o flux1-dev-fp8原始.safetensors",shell=True)
+# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-Flux%E5%8E%9F%E9%9A%8F%E6%8B%8D-fp16-1.1.safetensors?ref=main&nonce=1726185742539 -o MYHuman-Flux原随拍-fp16-1.1.safetensors",shell=True)
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-F.1-%E5%8E%9F%E5%A2%A8%E5%B9%BD%E9%9A%8F%E6%8B%8D-v1-%E9%9A%8F%E6%8B%8D.safetensors?ref=main&nonce=1726204698330 -o MYHuman-F.1-原墨幽随拍-v1-随拍.safetensors",shell=True)
 
 
