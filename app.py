@@ -135,6 +135,14 @@ os.system(f"git clone https://git.homegu.com/WASasquatch/was-node-suite-comfyui 
      'sam_vit_b_01ec64.pth'
  ]]
 
+# SAM检测加载器
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/sam2/{file_name}') 
+ for file_name in [
+     'sam2_hiera_large.pth'
+ ]]
+
 # bbox检测面部模型
 [download(dataset_repo='mofashi/comfy', 
           source_path=file_name, 
