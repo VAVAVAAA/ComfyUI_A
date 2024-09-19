@@ -140,7 +140,7 @@ os.system(f"git clone https://git.homegu.com/WASasquatch/was-node-suite-comfyui 
           source_path=file_name, 
           target_path=f'/home/xlab-app-center/models/sam2/{file_name}') 
  for file_name in [
-     'sam2_hiera_large.pth'
+     'sam2_hiera_large.safetensors'
  ]]
 
 # bbox检测面部模型
