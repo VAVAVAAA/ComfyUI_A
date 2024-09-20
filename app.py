@@ -64,7 +64,7 @@ os.system(f"git clone https://git.homegu.com/M1kep/ComfyLiterals /home/xlab-app-
 os.system(f"git clone https://git.homegu.com/lquesada/ComfyUI-Inpaint-CropAndStitch /home/xlab-app-center/custom_nodes/ComfyUI-Inpaint-CropAndStitch") # 重绘
 os.system(f"git clone https://git.homegu.com/erosDiffusion/ComfyUI-enricos-nodes /home/xlab-app-center/custom_nodes/ComfyUI-enricos-nodes") # 自定义构图
 os.system(f"git clone https://git.homegu.com/WASasquatch/was-node-suite-comfyui /home/xlab-app-center/custom_nodes/was-node-suite-comfyui") 
-#os.system(f"git clone https://git.homegu.com/shadowcz007/comfyui-mixlab-nodes /home/xlab-app-center/custom_nodes/comfyui-mixlab-nodes")
+os.system(f"git clone https://git.homegu.com/Fannovel16/ComfyUI-Frame-Interpolation /home/xlab-app-center/custom_nodes/ComfyUI-Frame-Interpolation") # 视频补帧
 # os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-SUPIR /home/xlab-app-center/custom_nodes/ComfyUI-SUPIR")
 
 # 大模型
