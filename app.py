@@ -65,7 +65,8 @@ os.system(f"git clone https://git.homegu.com/lquesada/ComfyUI-Inpaint-CropAndSti
 os.system(f"git clone https://git.homegu.com/erosDiffusion/ComfyUI-enricos-nodes /home/xlab-app-center/custom_nodes/ComfyUI-enricos-nodes") # 自定义构图
 os.system(f"git clone https://git.homegu.com/WASasquatch/was-node-suite-comfyui /home/xlab-app-center/custom_nodes/was-node-suite-comfyui") 
 os.system(f"git clone https://git.homegu.com/Fannovel16/ComfyUI-Frame-Interpolation /home/xlab-app-center/custom_nodes/ComfyUI-Frame-Interpolation") # 视频补帧
-# os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-SUPIR /home/xlab-app-center/custom_nodes/ComfyUI-SUPIR")
+os.system(f"git clone https://git.homegu.com/MinusZoneAI/ComfyUI-CogVideoX-MZ /home/xlab-app-center/custom_nodes/ComfyUI-CogVideoX-MZ")
+#os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-SUPIR /home/xlab-app-center/custom_nodes/ComfyUI-SUPIR")
 
 # 大模型
 [download(dataset_repo='mofashi/comfy', 
@@ -99,7 +100,8 @@ os.system(f"git clone https://git.homegu.com/Fannovel16/ComfyUI-Frame-Interpolat
           target_path=f'/home/xlab-app-center/models/vae/{file_name}') 
  for file_name in [
      'ketu_vae_fp16.safetensors', 
-     'flux_vae.safetensors'
+     'flux_vae.safetensors',
+     'CogvideoX-vae.safetensors'
  ]]
 # clip模型
 [download(dataset_repo='mofashi/comfy', 
