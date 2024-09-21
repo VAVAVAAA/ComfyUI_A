@@ -66,6 +66,7 @@ os.system(f"git clone https://git.homegu.com/erosDiffusion/ComfyUI-enricos-nodes
 os.system(f"git clone https://git.homegu.com/WASasquatch/was-node-suite-comfyui /home/xlab-app-center/custom_nodes/was-node-suite-comfyui") 
 os.system(f"git clone https://git.homegu.com/Fannovel16/ComfyUI-Frame-Interpolation /home/xlab-app-center/custom_nodes/ComfyUI-Frame-Interpolation") # 视频补帧
 os.system(f"git clone https://git.homegu.com/MinusZoneAI/ComfyUI-CogVideoX-MZ /home/xlab-app-center/custom_nodes/ComfyUI-CogVideoX-MZ") # 图生视频
+os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-CogVideoXWrapper /home/xlab-app-center/custom_nodes/ComfyUI-CogVideoXWrapper") # 图生视频，与上面搭配使用
 os.system(f"git clone https://git.homegu.com/TTPlanetPig/Comfyui_TTP_Toolset /home/xlab-app-center/custom_nodes/Comfyui_TTP_Toolset") # flux放大
 #os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-SUPIR /home/xlab-app-center/custom_nodes/ComfyUI-SUPIR")
 
