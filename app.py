@@ -66,6 +66,7 @@ os.system(f"git clone https://git.homegu.com/erosDiffusion/ComfyUI-enricos-nodes
 os.system(f"git clone https://git.homegu.com/WASasquatch/was-node-suite-comfyui /home/xlab-app-center/custom_nodes/was-node-suite-comfyui") 
 os.system(f"git clone https://git.homegu.com/Fannovel16/ComfyUI-Frame-Interpolation /home/xlab-app-center/custom_nodes/ComfyUI-Frame-Interpolation") # 视频补帧
 os.system(f"git clone https://git.homegu.com/MinusZoneAI/ComfyUI-CogVideoX-MZ /home/xlab-app-center/custom_nodes/ComfyUI-CogVideoX-MZ") # 图生视频
+os.system(f"git clone https://git.homegu.com/TTPlanetPig/Comfyui_TTP_Toolset /home/xlab-app-center/custom_nodes/Comfyui_TTP_Toolset") # flux放大
 #os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-SUPIR /home/xlab-app-center/custom_nodes/ComfyUI-SUPIR")
 
 # 大模型
@@ -135,7 +136,8 @@ os.rename(f'/home/xlab-app-center/models/LLM/Florence-2-large-PromptGen.safetens
           target_path=f'/home/xlab-app-center/models/upscale_models/{file_name}') 
  for file_name in [
      '4xNomos8kSCHAT-L.pth', 
-     'RealESRGAN_x4plus.pth'
+     'RealESRGAN_x4plus.pth',
+     '4x_NMKD-Siax_200k.pth'
  ]]
 
 # SAM检测加载器
