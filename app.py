@@ -24,7 +24,7 @@ os.system("pip install piexif")
 os.system("pip install accelerate>=0.25.0")
 os.system("pip install blend_modes")
 os.system("pip install diffusers")
-os.system("pip install impact.subpack_nodes") # impact-pack依赖，装上ai视频依赖时候出现报错
+os.system("pip install impact") # impact-pack依赖，装上ai视频依赖时候出现报错
 
 # os.chdir(f"/home/xlab-app-center")
 # 插件
