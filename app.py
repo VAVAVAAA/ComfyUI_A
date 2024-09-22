@@ -8,7 +8,7 @@ os.system("pip install --upgrade transformers==4.44.2")
 os.system("pip install torch==2.4.1")
 os.system("pip install --upgrade torchvision")
 os.system("pip install --upgrade packaging")
-os.system("pip install diffusers>=0.30.3")
+os.system("pip install diffusers>=0.30.3") # ai视频依赖
 
 os.system("pip install openxlab")
 os.system("pip install -U openxlab")
@@ -24,7 +24,7 @@ os.system("pip install piexif")
 os.system("pip install accelerate>=0.25.0")
 os.system("pip install blend_modes")
 os.system("pip install diffusers")
-os.system("pip install impact.subpack_nodes")
+os.system("pip install impact.subpack_nodes") # impact-pack依赖，装上ai视频依赖时候出现报错
 
 # os.chdir(f"/home/xlab-app-center")
 # 插件
