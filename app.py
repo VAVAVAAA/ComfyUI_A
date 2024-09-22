@@ -116,12 +116,6 @@ os.system(f"git clone https://git.homegu.com/TTPlanetPig/Comfyui_TTP_Toolset /ho
      't5xxl_fp8_e4m3fn.safetensors'
  ]]
 # 视觉识别模型&大语言模型
-base_path = '/home/xlab-app-center/models/LLM'
-[download(dataset_repo='mofashi/comfy', 
-          source_path=file_name, 
-          target_path=os.path.join(base_path, file_name)) 
- for file_name in ['Florence-2-large-PromptGen.safetensors']]
-os.rename(f'/home/xlab-app-center/models/LLM/Florence-2-large-PromptGen.safetensors', f'/home/xlab-app-center/models/LLM/Florence-2-large-PromptGen-v1.5.safetensors')
 # [download(dataset_repo='mofashi/comfy', 
 #           source_path=file_name, 
 #           target_path=f'/home/xlab-app-center/models/LLM/{file_name}') 
@@ -129,8 +123,6 @@ os.rename(f'/home/xlab-app-center/models/LLM/Florence-2-large-PromptGen.safetens
 #      'Florence-2-large-PromptGen.safetensors'
 #  ]]
 
-#改名
-# os.rename(f'/home/xlab-app-center/models/LLM/Florence-2-large-PromptGen.safetensors', f'/home/xlab-app-center/models/LLM/Florence-2-large-PromptGen.safetensors')
 
 # 放大模型
 [download(dataset_repo='mofashi/comfy', 
