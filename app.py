@@ -85,7 +85,8 @@ os.system(f"git clone https://git.homegu.com/TTPlanetPig/Comfyui_TTP_Toolset /ho
           target_path=f'/home/xlab-app-center/models/unet/{file_name}') 
  for file_name in [
      'ketu_fp16.safetensors', 
-     'CogVideoX_5b_fun_GGUF_Q4_0.safetensors'
+     'CogVideoX_5b_fun_GGUF_Q4_0.safetensors',
+     'CogVideoX_5b_I2V_GGUF_Q4_0.safetensors'
  ]]
 # lora
 [download(dataset_repo='mofashi/comfy', 
