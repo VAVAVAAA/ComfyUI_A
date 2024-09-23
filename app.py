@@ -99,7 +99,11 @@ os.system(f"git clone https://git.homegu.com/TTPlanetPig/Comfyui_TTP_Toolset /ho
      '墨幽-F.1-Lora-网图-MYH-1.1.safetensors',
      '墨幽Flux-Lora-网图.safetensors',
      'flux_realism_lora-写实主义.safetensors',
-     'Flux_小红书真实风格.safetensors'
+     'Flux_小红书真实风格.safetensors',
+     '万物调FluxTexture质感增强器.safetensors',
+     'ASKOLORS可图绘风.safetensors',
+     'ASKOLORS绘本插画风格.safetensors',
+     'kolors国风描金插画.safetensors'
  ]]
 # vae
 [download(dataset_repo='mofashi/comfy', 
