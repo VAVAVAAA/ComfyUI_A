@@ -100,7 +100,7 @@ os.system(f"git clone https://git.homegu.com/TTPlanetPig/Comfyui_TTP_Toolset /ho
      '墨幽Flux-Lora-网图.safetensors',
      'flux_realism_lora-写实主义.safetensors',
      'Flux_小红书真实风格.safetensors',
-     '万物调FluxTexture质感增强器.safetensors',
+     '万物调FluxTexture质感增强器06.safetensors',
      'ASKOLORS可图绘风.safetensors',
      'ASKOLORS绘本插画风格.safetensors',
      'kolors国风描金插画.safetensors'
@@ -199,6 +199,12 @@ subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dn
 os.makedirs("/home/xlab-app-center/models/LLM", exist_ok=True) # 目录不存在则自动创建
 os.chdir(f"/home/xlab-app-center/models/LLM") # 模型仓库，LLM文件夹
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/chatglm3-8bit.safetensors?ref=main&nonce=1725936486503 -o chatglm3-8bit.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('chatglm3-8bit下载完成')
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/Florence-2-large-PromptGen-v1.5.safetensors?ref=main&nonce=1727138430530 -o Florence-2-large-PromptGen-v1.5.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('Florence-2-large-PromptGen-v1.5下载完成')
+
+os.makedirs("/home/xlab-app-center/custom_nodes\ComfyUI-Easy-Use\wildcards", exist_ok=True) # 目录不存在则自动创建
+os.chdir(f"/home/xlab-app-center/custom_nodes\ComfyUI-Easy-Use\wildcards") # 模型仓库，通配符
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/qunzi.txt?ref=main&nonce=1727138648379 -o qunzi.txt",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('裙子通配符下载完成')
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/siwa.txt?ref=main&nonce=1727138773632 -o siwa.txt",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('丝袜通配符下载完成')
 
 os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
 os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
