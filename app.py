@@ -205,9 +205,9 @@ output = subprocess.getoutput("ls /home/xlab-app-center/custom_nodes\ComfyUI-Eas
 print(output)
 
 # os.makedirs("/home/xlab-app-center/custom_nodes\ComfyUI-Easy-Use\wildcards", exist_ok=True) # 目录不存在则自动创建
-os.chdir(f"/home/xlab-app-center/custom_nodes\ComfyUI-Easy-Use\wildcards") # 模型仓库，通配符
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/qunzi.txt?ref=main&nonce=1727138648379 -o qunzi.txt",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('裙子通配符下载完成')
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/siwa.txt?ref=main&nonce=1727138773632 -o siwa.txt",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('丝袜通配符下载完成')
+# os.chdir(f"/home/xlab-app-center/custom_nodes\ComfyUI-Easy-Use\wildcards") # 模型仓库，通配符
+# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/qunzi.txt?ref=main&nonce=1727138648379 -o qunzi.txt",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('裙子通配符下载完成')
+# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/siwa.txt?ref=main&nonce=1727138773632 -o siwa.txt",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('丝袜通配符下载完成')
 
 try:
     # 使用 subprocess 运行 git 命令
