@@ -209,7 +209,16 @@ os.chdir(f"/home/xlab-app-center/custom_nodes\ComfyUI-Easy-Use\wildcards") # 模
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/qunzi.txt?ref=main&nonce=1727138648379 -o qunzi.txt",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('裙子通配符下载完成')
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/siwa.txt?ref=main&nonce=1727138773632 -o siwa.txt",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('丝袜通配符下载完成')
 
-
+try:
+    # 使用 subprocess 运行 git 命令
+    version = subprocess.check_output(['git', 'describe', '--tags'], text=True).strip()
+    print(f"ComfyUI 版本: {version}")
+except subprocess.CalledProcessError:
+    print("当前目录不是 Git 仓库，或 Git 命令失败")
+    # 手动设置版本信息
+    version = "v1.0.0"  # 你可以根据需要手动定义版本
+    print(f"手动设置版本: {version}")
+          
 os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
 os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
 #os.system(f"python main.py --dont-print-server --listen 0.0.0.0 --port 7860 --enable-cors-header")
