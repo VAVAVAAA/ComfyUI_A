@@ -39,7 +39,7 @@ os.system(f"git clone https://git.homegu.com/rgthree/rgthree-comfy /home/xlab-ap
 os.system(f"git clone https://git.homegu.com/MinusZoneAI/ComfyUI-Kolors-MZ /home/xlab-app-center/custom_nodes/ComfyUI-Kolors-MZ") # 可图
 os.system(f"git clone https://git.homegu.com/SeaArtLab/comfyui_storydiffusion /home/xlab-app-center/custom_nodes/comfyui_storydiffusion") # 可图
 #os.system(f"git clone https://git.homegu.com/yolain/ComfyUI-Easy-Use /home/xlab-app-center/custom_nodes/ComfyUI-Easy-Use")
-os.system(f"git clone https://git.homegu.com/VAVAVAAA/ComfyUI-Easy-Use-A /home/xlab-app-center/custom_nodes/ComfyUI-Easy-Use-A")
+os.system(f"git clone https://git.homegu.com/VAVAVAAA/ComfyUI-Easy-Use-A /home/xlab-app-center/custom_nodes/ComfyUI-Easy-Use-A") # 自己fork仓库的
 #os.system(f"git clone https://git.homegu.com/xinsir6/ControlNetPlus /home/xlab-app-center/custom_nodes/ControlNetPlus") # 全能xl调用
 os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-segment-anything-2 /home/xlab-app-center/custom_nodes/ComfyUI-segment-anything-2") # 第二代抠图
 os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-KJNodes /home/xlab-app-center/custom_nodes/ComfyUI-KJNodes")
