@@ -73,7 +73,8 @@ os.system(f"git clone https://git.homegu.com/Fannovel16/ComfyUI-Frame-Interpolat
 os.system(f"git clone https://git.homegu.com/MinusZoneAI/ComfyUI-CogVideoX-MZ /home/xlab-app-center/custom_nodes/ComfyUI-CogVideoX-MZ") # 图生视频
 os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-CogVideoXWrapper /home/xlab-app-center/custom_nodes/ComfyUI-CogVideoXWrapper") # 图生视频，与上面搭配使用
 os.system(f"git clone https://git.homegu.com/TTPlanetPig/Comfyui_TTP_Toolset /home/xlab-app-center/custom_nodes/Comfyui_TTP_Toolset") # flux放大
-#os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-SUPIR /home/xlab-app-center/custom_nodes/ComfyUI-SUPIR")
+os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-Florence2 /home/xlab-app-center/custom_nodes/ComfyUI-Florence2")
+
 
 # 大模型
 [download(dataset_repo='mofashi/comfy', 
@@ -90,7 +91,7 @@ os.system(f"git clone https://git.homegu.com/TTPlanetPig/Comfyui_TTP_Toolset /ho
  for file_name in [
      'ketu_fp16.safetensors', 
      'CogVideoX_5b_fun_GGUF_Q4_0.safetensors',
-     'CogVideoX_5b_I2V_GGUF_Q4_0.safetensors'
+     
  ]]
 # lora
 [download(dataset_repo='mofashi/comfy', 
@@ -227,23 +228,7 @@ os.chdir(f"/home/xlab-app-center/models/LLM") # 模型仓库，LLM文件夹
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/chatglm3-8bit.safetensors?ref=main&nonce=1725936486503 -o chatglm3-8bit.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('chatglm3-8bit下载完成')
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/Florence-2-large-PromptGen-v1.5.safetensors?ref=main&nonce=1727138430530 -o Florence-2-large-PromptGen-v1.5.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('Florence-2-large-PromptGen-v1.5下载完成')
 
-output = subprocess.getoutput("ls /home/xlab-app-center/custom_nodes\ComfyUI-Easy-Use")
-print(output)
 
-# os.makedirs("/home/xlab-app-center/custom_nodes\ComfyUI-Easy-Use\wildcards", exist_ok=True) # 目录不存在则自动创建
-# os.chdir(f"/home/xlab-app-center/custom_nodes\ComfyUI-Easy-Use\wildcards") # 模型仓库，通配符
-# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/qunzi.txt?ref=main&nonce=1727138648379 -o qunzi.txt",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('裙子通配符下载完成')
-# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/siwa.txt?ref=main&nonce=1727138773632 -o siwa.txt",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('丝袜通配符下载完成')
-
-try:
-    # 使用 subprocess 运行 git 命令
-    version = subprocess.check_output(['git', 'describe', '--tags'], text=True).strip()
-    print(f"ComfyUI 版本: {version}")
-except subprocess.CalledProcessError:
-    print("当前目录不是 Git 仓库，或 Git 命令失败")
-    # 手动设置版本信息
-    version = "v1.0.0"  # 你可以根据需要手动定义版本
-    print(f"手动设置版本: {version}")
           
 os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
 os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
