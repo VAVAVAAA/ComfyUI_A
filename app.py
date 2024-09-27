@@ -186,27 +186,27 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-Florence2 /home/xlab-
      '极氪白白酱Flux-人像V6MAX'
  ]]
 
-# 设置下载链接和目标 ZIP 文件的路径
-url = 'https://cdn-xlab-data.openxlab.org.cn/objects/68f5b8a0d8e896cacdb9c825af571e6cfa16f3fef1e3d1213d8b46a78fb88062?Expires=1727327264&OSSAccessKeyId=LTAI5tSqABbitQcgeNNd8dAE&Signature=qX1ObZuALTRrz4bo8zVixH6gI70%3D&response-content-disposition=attachment%3B%20filename%3D%22vitmatte.zip%22&response-content-type=application%2Foctet-stream'  # 替换为你的 ZIP 文件下载链接
-zip_file_path = 'vitmatte.zip'     # 下载后保存的 ZIP 文件名
-extract_to_path = '/home/xlab-app-center/models/vitmatte/'       # 解压后保存的目录
+# # 设置下载链接和目标 ZIP 文件的路径
+# url = ''  # 替换为你的 ZIP 文件下载链接
+# zip_file_path = 'vitmatte.zip'     # 下载后保存的 ZIP 文件名
+# extract_to_path = '/home/xlab-app-center/models/vitmatte/'       # 解压后保存的目录
 
-# 下载 ZIP 文件
-response = requests.get(url)
-with open(zip_file_path, 'wb') as zip_file:
-    zip_file.write(response.content)
+# # 下载 ZIP 文件
+# response = requests.get(url)
+# with open(zip_file_path, 'wb') as zip_file:
+#     zip_file.write(response.content)
 
-print(f'ZIP 文件已下载到: {zip_file_path}')
+# print(f'ZIP 文件已下载到: {zip_file_path}')
 
-# 检查目标解压路径是否存在，如果不存在则创建
-if not os.path.exists(extract_to_path):
-    os.makedirs(extract_to_path)
+# # 检查目标解压路径是否存在，如果不存在则创建
+# if not os.path.exists(extract_to_path):
+#     os.makedirs(extract_to_path)
 
-# 解压 ZIP 文件
-with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
-    zip_ref.extractall(extract_to_path)
+# # 解压 ZIP 文件
+# with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+#     zip_ref.extractall(extract_to_path)
 
-print(f'解压完成，文件已解压到：{extract_to_path}')
+# print(f'解压完成，文件已解压到：{extract_to_path}')
 
 # 大模型
 os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
