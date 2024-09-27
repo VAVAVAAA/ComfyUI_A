@@ -170,12 +170,12 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-Florence2 /home/xlab-
      'face_yolov8m.pt'
  ]]
 # 数据集2-controlnet
-# [download(dataset_repo='mofashi/comfy2', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
-#  for file_name in [
-#      'FLUX-dev-Controlnet-Inpainting-Alpha.safetensors'
-#  ]]
+[download(dataset_repo='mofashi/comfy2', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
+ for file_name in [
+     'FLUX-dev-Controlnet-Inpainting-Alpha.safetensors'
+ ]]
 # 数据集2- lora
 [download(dataset_repo='mofashi/comfy2', 
           source_path=file_name, 
