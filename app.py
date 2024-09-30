@@ -74,6 +74,7 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-CogVideoXWrapper /hom
 os.system(f"git clone https://git.homegu.com/TTPlanetPig/Comfyui_TTP_Toolset /home/xlab-app-center/custom_nodes/Comfyui_TTP_Toolset") # flux放大
 os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-Florence2 /home/xlab-app-center/custom_nodes/ComfyUI-Florence2")
 os.system(f"git clone https://git.homegu.com/shiimizu/ComfyUI-PhotoMaker-Plus /home/xlab-app-center/custom_nodes/ComfyUI-PhotoMaker-Plus") # 换脸
+os.system(f"git clone https://git.homegu.com/cubiq/ComfyUI_InstantID /home/xlab-app-center/custom_nodes/ComfyUI_InstantID") # 换脸
 
 
 # 大模型
@@ -170,6 +171,14 @@ os.system(f"git clone https://git.homegu.com/shiimizu/ComfyUI-PhotoMaker-Plus /h
  for file_name in [
      'face_yolov8m.pt'
  ]]
+# controlnet
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
+ for file_name in [
+     'diffusion_pytorch_model.safetensors'
+ ]]
+
 # 数据集2-controlnet
 [download(dataset_repo='mofashi/comfy2', 
           source_path=file_name, 
@@ -187,27 +196,35 @@ os.system(f"git clone https://git.homegu.com/shiimizu/ComfyUI-PhotoMaker-Plus /h
      '极氪白白酱Flux-人像V6MAX'
  ]]
 
-# # 设置下载链接和目标 ZIP 文件的路径
-# url = ''  # 替换为你的 ZIP 文件下载链接
-# zip_file_path = 'vitmatte.zip'     # 下载后保存的 ZIP 文件名
-# extract_to_path = '/home/xlab-app-center/models/vitmatte/'       # 解压后保存的目录
+# id换脸模型
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/instantid/{file_name}') 
+ for file_name in [
+     'ip-adapter.bin'
+ ]]
 
-# # 下载 ZIP 文件
-# response = requests.get(url)
-# with open(zip_file_path, 'wb') as zip_file:
-#     zip_file.write(response.content)
+# 设置下载链接和目标 ZIP 文件的路径
+url = 'https://cdn-xlab-data.openxlab.org.cn/objects/8e182f14fc6e80b3bfa375b33eb6cff7ee05d8ef7633e738d1c89021dcf0c5c5?Expires=1727759738&OSSAccessKeyId=LTAI5tSqABbitQcgeNNd8dAE&Signature=xfpmiZOgkgb%2FgTU%2Bm%2FxV8Hpkad4%3D&response-content-disposition=attachment%3B%20filename%3D%22antelopev2.zip%22&response-content-type=application%2Foctet-stream'  # 替换为你的 ZIP 文件下载链接
+zip_file_path = 'antelopev2.zip'     # 下载后保存的 ZIP 文件名
+extract_to_path = '/home/xlab-app-center/models/insightface/models/antelopev2'       # 解压后保存的目录
 
-# print(f'ZIP 文件已下载到: {zip_file_path}')
+# 下载 ZIP 文件
+response = requests.get(url)
+with open(zip_file_path, 'wb') as zip_file:
+    zip_file.write(response.content)
 
-# # 检查目标解压路径是否存在，如果不存在则创建
-# if not os.path.exists(extract_to_path):
-#     os.makedirs(extract_to_path)
+print(f'ZIP 文件已下载到: {zip_file_path}')
 
-# # 解压 ZIP 文件
-# with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
-#     zip_ref.extractall(extract_to_path)
+# 检查目标解压路径是否存在，如果不存在则创建
+if not os.path.exists(extract_to_path):
+    os.makedirs(extract_to_path)
 
-# print(f'解压完成，文件已解压到：{extract_to_path}')
+# 解压 ZIP 文件
+with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+    zip_ref.extractall(extract_to_path)
+
+print(f'解压完成，文件已解压到：{extract_to_path}')
 
 # 大模型
 os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
