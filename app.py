@@ -26,6 +26,8 @@ os.system("pip install piexif")
 os.system("pip install accelerate>=0.25.0")
 os.system("pip install blend_modes")
 os.system("pip install diffusers")
+os.system("pip install insightface")
+
 
 # os.chdir(f"/home/xlab-app-center")
 # 插件
