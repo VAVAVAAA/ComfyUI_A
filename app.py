@@ -231,7 +231,7 @@ subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dn
 
           
 os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
-os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
-#os.system(f"python main.py --dont-print-server --listen 0.0.0.0 --port 7860 --enable-cors-header")
+#os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
+os.system(f"python main.py --cpu --listen 0.0.0.0 --port 7860 --enable-cors-header")
 
 
