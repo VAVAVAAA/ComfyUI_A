@@ -10,7 +10,7 @@ os.system("pip install --upgrade transformers==4.44.2")
 os.system("pip install torch==2.4.1")
 os.system("pip install --upgrade torchvision")
 os.system("pip install --upgrade packaging")
-# os.system("pip install diffusers>=0.30.3") # ai视频依赖
+os.system("pip install impact.subpack_nodes")
 
 os.system("pip install openxlab")
 os.system("pip install -U openxlab")
