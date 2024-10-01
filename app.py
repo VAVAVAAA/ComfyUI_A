@@ -7,10 +7,10 @@ import zipfile
 import requests
 # 环境
 os.system("pip install --upgrade transformers==4.44.2")
-# os.system("pip install torch==2.4.1")
+os.system("pip install torch==2.4.1")
 os.system("pip install --upgrade torchvision")
 os.system("pip install --upgrade packaging")
-os.system("pip install impact.subpack_nodes")
+
 
 os.system("pip install openxlab")
 os.system("pip install -U openxlab")
@@ -28,6 +28,7 @@ os.system("pip install blend_modes")
 os.system("pip install diffusers")
 os.system("pip install insightface")
 os.system("pip install deepdiff")
+os.system("pip install impact.subpack_nodes")
 
 # os.chdir(f"/home/xlab-app-center")
 # 插件
