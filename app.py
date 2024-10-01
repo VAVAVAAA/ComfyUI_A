@@ -7,7 +7,7 @@ import zipfile
 import requests
 # 环境
 os.system("pip install --upgrade transformers==4.44.2")
-os.system("pip install torch==2.4.1")
+# os.system("pip install torch==2.4.1")
 os.system("pip install --upgrade torchvision")
 os.system("pip install --upgrade packaging")
 os.system("pip install impact.subpack_nodes")
