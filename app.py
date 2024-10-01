@@ -29,6 +29,7 @@ os.system("pip install diffusers")
 os.system("pip install insightface")
 os.system("pip install deepdiff")
 os.system("pip install impact.subpack_nodes")
+os.system("pip install cpuinfo")
 
 # os.chdir(f"/home/xlab-app-center")
 # 插件
