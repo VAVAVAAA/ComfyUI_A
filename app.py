@@ -97,6 +97,7 @@ os.system(f"git clone https://git.homegu.com/crystian/ComfyUI-Crystools /home/xl
  for file_name in [
      'ketu_fp16.safetensors', 
      'CogVideoX_5b_fun_GGUF_Q4_0.safetensors',
+     'CogVideoX_5b_fun_1_1_GGUF_Q4_0.safetensors'
      
  ]]
 # lora
