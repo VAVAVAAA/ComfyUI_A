@@ -31,6 +31,8 @@ os.system("pip install deepdiff")
 os.system("pip install impact.subpack_nodes")
 os.system("pip install py-cpuinfo")
 os.system("pip install pynvml")
+os.system("pip install iopath")
+
 
 # os.chdir(f"/home/xlab-app-center")
 # 插件
