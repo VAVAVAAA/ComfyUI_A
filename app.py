@@ -118,7 +118,9 @@ os.system(f"git clone https://git.homegu.com/crystian/ComfyUI-Crystools /home/xl
      '万物调FluxTexture质感增强器06.safetensors',
      'ASKOLORS可图绘风.safetensors',
      'ASKOLORS绘本插画风格.safetensors',
-     'kolors国风描金插画.safetensors'
+     'kolors国风描金插画.safetensors',
+     'Zenpainting禅意插画08.safetensors',
+     'UIA插画古风山水艺术06.safetensors'
  ]]
 # vae
 [download(dataset_repo='mofashi/comfy', 
