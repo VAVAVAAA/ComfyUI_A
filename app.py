@@ -28,7 +28,7 @@ os.system("pip install blend_modes")
 os.system("pip install diffusers")
 os.system("pip install insightface")
 os.system("pip install deepdiff")
-os.system("pip install impact.subpack_nodes")
+os.system("pip install opencv-python-headless") # Impact-Pack的依赖
 os.system("pip install py-cpuinfo")
 os.system("pip install pynvml")
 os.system("pip install iopath")
