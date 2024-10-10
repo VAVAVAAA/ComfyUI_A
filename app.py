@@ -28,7 +28,7 @@ os.system("pip install blend_modes")
 os.system("pip install diffusers")
 os.system("pip install insightface")
 os.system("pip install deepdiff")
-os.system("pip install opencv-python-headless") # Impact-Pack的依赖
+# os.system("pip install opencv-python-headless") # Impact-Pack的依赖
 os.system("pip install py-cpuinfo")
 os.system("pip install pynvml")
 os.system("pip install iopath")
@@ -83,7 +83,7 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-Florence2 /home/xlab-
 os.system(f"git clone https://git.homegu.com/shiimizu/ComfyUI-PhotoMaker-Plus /home/xlab-app-center/custom_nodes/ComfyUI-PhotoMaker-Plus") # 换脸
 os.system(f"git clone https://git.homegu.com/cubiq/ComfyUI_InstantID /home/xlab-app-center/custom_nodes/ComfyUI_InstantID") # 换脸
 os.system(f"git clone https://git.homegu.com/crystian/ComfyUI-Crystools /home/xlab-app-center/custom_nodes/ComfyUI-Crystools") # 性能检测
-
+os.system(f"git clone https://git.homegu.com/VAVAVAAA/impact_subpack /home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack/impact_subpack") #子包依赖
 
 # 大模型
 [download(dataset_repo='mofashi/comfy', 
@@ -236,6 +236,7 @@ with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
     zip_ref.extractall(extract_to_path)
 
 print(f'解压完成，文件已解压到：{extract_to_path}')
+
 
 # 大模型
 os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
