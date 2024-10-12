@@ -84,6 +84,8 @@ os.system(f"git clone https://git.homegu.com/shiimizu/ComfyUI-PhotoMaker-Plus /h
 os.system(f"git clone https://git.homegu.com/cubiq/ComfyUI_InstantID /home/xlab-app-center/custom_nodes/ComfyUI_InstantID") # 换脸
 os.system(f"git clone https://git.homegu.com/crystian/ComfyUI-Crystools /home/xlab-app-center/custom_nodes/ComfyUI-Crystools") # 性能检测
 os.system(f"git clone https://git.homegu.com/VAVAVAAA/impact_subpack /home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack/impact_subpack") #子包依赖
+os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-PyramidFlowWrapper /home/xlab-app-center/custom_nodes/ComfyUI-PyramidFlowWrapper") # 10/12ai视频模型
+
 
 # 大模型
 [download(dataset_repo='mofashi/comfy', 
