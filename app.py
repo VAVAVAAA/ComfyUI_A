@@ -32,6 +32,7 @@ os.system("pip install deepdiff")
 os.system("pip install py-cpuinfo")
 os.system("pip install pynvml")
 os.system("pip install iopath")
+os.system("pip install webcolors")
 
 
 # os.chdir(f"/home/xlab-app-center")
