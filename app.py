@@ -193,7 +193,7 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
           source_path=file_name, 
           target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
  for file_name in [
-     'diffusion_pytorch_model.safetensors'
+     'InstantID-controlnet.safetensors'
  ]]
 
 # 数据集2-controlnet
