@@ -124,7 +124,7 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
      'ASKOLORS绘本插画风格.safetensors',
      'kolors国风描金插画.safetensors',
      'Zenpainting禅意插画08.safetensors',
-     'UIA插画古风山水艺术06.safetensors'，
+     'UIA插画古风山水艺术06.safetensors',
      'FLUX-Turbo-Alpha.safetensors',
      '美学艺术Aestheticsart.safetensors'
  ]]
