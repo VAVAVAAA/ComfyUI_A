@@ -245,18 +245,31 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
 
 os.chdir(f"/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/impact_subpack.zip?ref=main&nonce=1728979459746 -o impact_subpack.zip",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('impact_subpack下载完成')
-# 查找压缩包并解压
-os.chdir(f"/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
-zip_file_path = "impact_subpack.zip"
-if os.path.exists(zip_file_path):
-    subprocess.run(f"unzip {zip_file_path}", shell=True)
-    print("文件解压完成")
 
-    # 删除压缩包
-    os.remove(zip_file_path)
-    print(f"已删除压缩包 {zip_file_path}")
-else:
-    print(f"{zip_file_path} 不存在或者解压失败")
+os.chdir(f"/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
+directory = '/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack'
+
+# 尝试获取目录中的所有文件和文件夹
+try:
+    files_and_dirs = os.listdir(directory)
+    # 打印所有文件和文件夹
+    for item in files_and_dirs:
+        print(item)
+except FileNotFoundError:
+    print(f"目录 '{directory}' 不存在。请检查路径是否正确。")
+
+# # 查找压缩包并解压
+# os.chdir(f"/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
+# zip_file_path = "impact_subpack.zip"
+# if os.path.exists(zip_file_path):
+#     subprocess.run(f"unzip {zip_file_path}", shell=True)
+#     print("文件解压完成")
+
+#     # 删除压缩包
+#     os.remove(zip_file_path)
+#     print(f"已删除压缩包 {zip_file_path}")
+# else:
+#     print(f"{zip_file_path} 不存在或者解压失败")
 
 # 大模型
 os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
