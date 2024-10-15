@@ -84,7 +84,6 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-Florence2 /home/xlab-
 os.system(f"git clone https://git.homegu.com/shiimizu/ComfyUI-PhotoMaker-Plus /home/xlab-app-center/custom_nodes/ComfyUI-PhotoMaker-Plus") # 换脸
 os.system(f"git clone https://git.homegu.com/cubiq/ComfyUI_InstantID /home/xlab-app-center/custom_nodes/ComfyUI_InstantID") # 换脸
 os.system(f"git clone https://git.homegu.com/crystian/ComfyUI-Crystools /home/xlab-app-center/custom_nodes/ComfyUI-Crystools") # 性能检测
-os.system(f"git clone https://git.homegu.com/VAVAVAAA/impact_subpack /home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack/impact_subpack") #子包依赖
 os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-PyramidFlowWrapper /home/xlab-app-center/custom_nodes/ComfyUI-PyramidFlowWrapper") # 10/12ai视频模型
 os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xlab-app-center/custom_nodes/ComfyUI-FluxTrainer") # lora训练
 
@@ -244,6 +243,19 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
 
 # print(f'解压完成，文件已解压到：{extract_to_path}')
 
+os.chdir(f"/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/impact_subpack.zip?ref=main&nonce=1728979459746 -o impact_subpack.zip",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('impact_subpack下载完成')
+# 查找压缩包并解压
+zip_file_path = "impact_subpack.zip"
+if os.path.exists(zip_file_path):
+    subprocess.run(f"unzip {zip_file_path}", shell=True)
+    print("文件解压完成")
+
+    # 删除压缩包
+    os.remove(zip_file_path)
+    print(f"已删除压缩包 {zip_file_path}")
+else:
+    print(f"{zip_file_path} 不存在或者解压失败")
 
 # 大模型
 os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
