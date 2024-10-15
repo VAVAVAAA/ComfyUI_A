@@ -243,8 +243,16 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
 
 # print(f'解压完成，文件已解压到：{extract_to_path}')
 
-os.chdir(f"/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/impact_subpack.zip?ref=main&nonce=1728979459746 ",shell=True);print('impact_subpack下载完成')
+# os.chdir(f"/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
+# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/impact_subpack.zip?ref=main&nonce=1728979459746 ",shell=True);print('impact_subpack下载完成')
+
+# id换脸模型
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack{file_name}') 
+ for file_name in [
+     'impact_subpack.zip'
+ ]]
 
 os.chdir(f"/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
 directory = '/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack'
