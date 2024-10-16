@@ -302,6 +302,21 @@ subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dn
           
 os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
 #os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
-os.system(f"python main.py --cpu --listen 0.0.0.0 --port 7860 --enable-cors-header")
+#os.system(f"python main.py --cpu --listen 0.0.0.0 --port 7860 --enable-cors-header")
+
+def has_gpu():
+    try:
+        # 尝试运行 nvidia-smi 命令，检查是否有显卡
+        result = subprocess.run(['nvidia-smi'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        return result.returncode == 0  # 如果返回码为0，表示有显卡
+    except FileNotFoundError:
+        return False  # 如果找不到命令，则表示没有显卡
+
+if has_gpu():
+    command = "python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header"
+else:
+    command = "python main.py --cpu --listen 0.0.0.0 --port 7860 --enable-cors-header"
+
+os.system(command)
 
 
