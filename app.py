@@ -256,18 +256,18 @@ try:
 except FileNotFoundError:
     print(f"目录 '{directory}' 不存在。请检查路径是否正确。")
 
-# # 查找压缩包并解压
-# os.chdir(f"/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
-# zip_file_path = "impact_subpack.zip"
-# if os.path.exists(zip_file_path):
-#     subprocess.run(f"unzip {zip_file_path}", shell=True)
-#     print("文件解压完成")
+# 查找压缩包并解压
+os.chdir(f"/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
+zip_file_path = "impact_subpack.zip"
+if os.path.exists(zip_file_path):
+    subprocess.run(f"unzip {zip_file_path}", shell=True)
+    print("文件解压完成")
 
-#     # 删除压缩包
-#     os.remove(zip_file_path)
-#     print(f"已删除压缩包 {zip_file_path}")
-# else:
-#     print(f"{zip_file_path} 不存在或者解压失败")
+    # 删除压缩包
+    os.remove(zip_file_path)
+    print(f"已删除压缩包 {zip_file_path}")
+else:
+    print(f"{zip_file_path} 不存在或者解压失败")
 
 # # 大模型
 # os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
