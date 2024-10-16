@@ -60,8 +60,8 @@ os.system(f"git clone https://git.homegu.com/ltdrdata/ComfyUI-Inspire-Pack /home
 os.system(f"git clone https://git.homegu.com/cubiq/ComfyUI_IPAdapter_plus /home/xlab-app-center/custom_nodes/ComfyUI_IPAdapter_plus")
 os.system(f"git clone https://git.homegu.com/Kosinkadink/ComfyUI-VideoHelperSuite /home/xlab-app-center/custom_nodes/ComfyUI-VideoHelperSuite")
 os.system(f"git clone https://git.homegu.com/Nourepide/ComfyUI-Allor /home/xlab-app-center/custom_nodes/ComfyUI-Allor")
-os.system(f"git clone https://git.homegu.com/StartHua/Comfyui_CXH_joy_caption  /home/xlab-app-center/custom_nodes/Comfyui_CXH_joy_caption") # 支持多个视觉反推模型
-os.system(f"git clone https://git.homegu.com/miaoshouai/ComfyUI-Miaoshouai-Tagger /home/xlab-app-center/custom_nodes/ComfyUI-Miaoshouai-Tagger") # 全新的视觉反推模型，显存更小
+os.system(f"git clone https://git.homegu.com/EvilBT/ComfyUI_SLK_joy_caption_two  /home/xlab-app-center/custom_nodes/ComfyUI_SLK_joy_caption_two ") # joy_caption2代
+# os.system(f"git clone https://git.homegu.com/miaoshouai/ComfyUI-Miaoshouai-Tagger /home/xlab-app-center/custom_nodes/ComfyUI-Miaoshouai-Tagger") # 全新的视觉反推模型，显存更小
 os.system(f"git clone https://git.homegu.com/siliconflow/BizyAir /home/xlab-app-center/custom_nodes/BizyAir") # 满血版反推
 
 os.system(f"git clone https://git.homegu.com/pythongosssss/ComfyUI-Custom-Scripts /home/xlab-app-center/custom_nodes/ComfyUI-Custom-Scripts")
@@ -278,7 +278,7 @@ subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dn
 
 os.makedirs("/home/xlab-app-center/models/LLM", exist_ok=True) # 目录不存在则自动创建
 os.chdir(f"/home/xlab-app-center/models/LLM") # 模型仓库，LLM文件夹
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/chatglm3-8bit.safetensors?ref=main&nonce=1725936486503 -o chatglm3-8bit.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('chatglm3-8bit下载完成')
+# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/chatglm3-8bit.safetensors?ref=main&nonce=1725936486503 -o chatglm3-8bit.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('chatglm3-8bit下载完成')
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/Florence-2-large-PromptGen-v1.5.safetensors?ref=main&nonce=1727138430530 -o Florence-2-large-PromptGen-v1.5.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('Florence-2-large-PromptGen-v1.5下载完成')
 
 
