@@ -151,7 +151,7 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
 #           source_path=file_name, 
 #           target_path=f'/home/xlab-app-center/models/LLM/{file_name}') 
 #  for file_name in [
-#     'Florence-2-large-PromptGen.safetensors'
+# #    'Florence-2-large-PromptGen.safetensors'
 #  ]]
 
 
