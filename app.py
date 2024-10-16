@@ -229,19 +229,21 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
 #      'impact_subpack.zip'
 #  ]]
 
+# 设置目标目录
+target_dir = '/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack/'
+source_file_path = os.path.join(target_dir, 'mofashi___comfy', 'impact_subpack.zip')
+target_file_path = os.path.join(target_dir, 'impact_subpack.zip')
+
 # 下载数据集
-result = download(dataset_repo='mofashi/comfy', source_path='impact_subpack.zip', target_path='/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack/')
+download(dataset_repo='mofashi/comfy', source_path='impact_subpack.zip', target_path=target_dir)
 
 # 确认下载结果并移动文件
-downloaded_file_path = result  # 获取下载的文件路径
-
-# 如果下载成功，移动文件到目标目录
-if os.path.exists(downloaded_file_path):
-    target_file_path = '/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack/impact_subpack.zip'
-    shutil.move(downloaded_file_path, target_file_path)
+if os.path.exists(source_file_path):
+    shutil.move(source_file_path, target_file_path)
+    print(f"文件已成功移动到: {target_file_path}")
 else:
     print("下载的文件不存在，请检查下载过程。")
-
+     
 os.chdir(f"/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
 directory = '/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack'
 
