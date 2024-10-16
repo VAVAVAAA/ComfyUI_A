@@ -28,7 +28,7 @@ os.system("pip install blend_modes")
 os.system("pip install diffusers")
 os.system("pip install insightface")
 os.system("pip install deepdiff")
-# os.system("pip install opencv-python-headless") # Impact-Pack的依赖
+os.system("pip install ultralytics") # Impact-Pack的依赖
 os.system("pip install py-cpuinfo")
 os.system("pip install pynvml")
 os.system("pip install iopath")
@@ -301,7 +301,7 @@ subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dn
 
           
 os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
-os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
-#os.system(f"python main.py --cpu --listen 0.0.0.0 --port 7860 --enable-cors-header")
+#os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
+os.system(f"python main.py --cpu --listen 0.0.0.0 --port 7860 --enable-cors-header")
 
 
