@@ -249,7 +249,7 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
 # id换脸模型
 [download(dataset_repo='mofashi/comfy', 
           source_path=file_name, 
-          target_path=f'/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack{file_name}') 
+          target_path=f'/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack/{file_name}') 
  for file_name in [
      'impact_subpack.zip'
  ]]
