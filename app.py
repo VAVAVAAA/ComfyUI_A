@@ -89,145 +89,138 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
 
 
 
-# # 大模型
-# [download(dataset_repo='mofashi/comfy', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/models/checkpoints/{file_name}') 
-#  for file_name in [
-#      'MYHuman-墨幽人造人15.safetensors'
-#  ]]
+# 大模型
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/checkpoints/{file_name}') 
+ for file_name in [
+     'MYHuman-墨幽人造人15.safetensors'
+ ]]
 
-# # unet模型
-# [download(dataset_repo='mofashi/comfy', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/models/unet/{file_name}') 
-#  for file_name in [
-#      'ketu_fp16.safetensors', 
-#      'CogVideoX_5b_fun_GGUF_Q4_0.safetensors',
-#      'CogVideoX_5b_fun_1_1_GGUF_Q4_0.safetensors'
+# unet模型
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/unet/{file_name}') 
+ for file_name in [
+     'ketu_fp16.safetensors', 
+     'CogVideoX_5b_fun_GGUF_Q4_0.safetensors',
+     'CogVideoX_5b_fun_1_1_GGUF_Q4_0.safetensors'
      
-#  ]]
-# # lora
-# [download(dataset_repo='mofashi/comfy', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/models/loras/{file_name}') 
-#  for file_name in [
-#      'Hyper-FLUX.1-dev-8steps-lora.safetensors', 
-#      'xl_99art写实摄影·光影光斑光晕增强.safetensors',
-#      '绘梦摄影Flux复古胶片摄影时尚写真电影质感.safetensors',
-#      '墨幽-F.1-Lora-网图-MYH-1.1.safetensors',
-#      '墨幽Flux-Lora-网图.safetensors',
-#      'flux_realism_lora-写实主义.safetensors',
-#      'Flux_小红书真实风格.safetensors',
-#      '万物调FluxTexture质感增强器06.safetensors',
-#      'ASKOLORS可图绘风.safetensors',
-#      'ASKOLORS绘本插画风格.safetensors',
-#      'kolors国风描金插画.safetensors',
-#      'Zenpainting禅意插画08.safetensors',
-#      'UIA插画古风山水艺术06.safetensors',
-#      'FLUX-Turbo-Alpha.safetensors',
-#      '美学艺术Aestheticsart.safetensors'
-#  ]]
-# # vae
-# [download(dataset_repo='mofashi/comfy', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/models/vae/{file_name}') 
-#  for file_name in [
-#      'ketu_vae_fp16.safetensors', 
-#      'flux_vae.safetensors',
-#      'CogvideoX-vae.safetensors'
-#  ]]
-# # clip模型
-# [download(dataset_repo='mofashi/comfy', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/models/clip/{file_name}') 
-#  for file_name in [
-#      'ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors', 
-#      'clip_l.safetensors',
-#      't5xxl_fp8_e4m3fn.safetensors'
-#  ]]
-# # 视觉识别模型&大语言模型
-# [download(dataset_repo='mofashi/comfy', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/models/LLM/{file_name}') 
-#  for file_name in [
-# #    'Florence-2-large-PromptGen.safetensors'
-#  ]]
+ ]]
+# lora
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/loras/{file_name}') 
+ for file_name in [
+     'Hyper-FLUX.1-dev-8steps-lora.safetensors', 
+     'xl_99art写实摄影·光影光斑光晕增强.safetensors',
+     '绘梦摄影Flux复古胶片摄影时尚写真电影质感.safetensors',
+     '墨幽-F.1-Lora-网图-MYH-1.1.safetensors',
+     '墨幽Flux-Lora-网图.safetensors',
+     'flux_realism_lora-写实主义.safetensors',
+     'Flux_小红书真实风格.safetensors',
+     '万物调FluxTexture质感增强器06.safetensors',
+     'ASKOLORS可图绘风.safetensors',
+     'ASKOLORS绘本插画风格.safetensors',
+     'kolors国风描金插画.safetensors',
+     'Zenpainting禅意插画08.safetensors',
+     'UIA插画古风山水艺术06.safetensors',
+     'FLUX-Turbo-Alpha.safetensors',
+     '美学艺术Aestheticsart.safetensors'
+ ]]
+# vae
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/vae/{file_name}') 
+ for file_name in [
+     'ketu_vae_fp16.safetensors', 
+     'flux_vae.safetensors',
+     'CogvideoX-vae.safetensors'
+ ]]
+# clip模型
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/clip/{file_name}') 
+ for file_name in [
+     'ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors', 
+     'clip_l.safetensors',
+     't5xxl_fp8_e4m3fn.safetensors'
+ ]]
+# 视觉识别模型&大语言模型
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/LLM/{file_name}') 
+ for file_name in [
+#    'Florence-2-large-PromptGen.safetensors'
+ ]]
 
 
-# # 放大模型
-# [download(dataset_repo='mofashi/comfy', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/models/upscale_models/{file_name}') 
-#  for file_name in [
-#      '4xNomos8kSCHAT-L.pth', 
-#      'RealESRGAN_x4plus.pth',
-#      '4x_NMKD-Siax_200k.pth'
-#  ]]
+# 放大模型
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/upscale_models/{file_name}') 
+ for file_name in [
+     '4xNomos8kSCHAT-L.pth', 
+     'RealESRGAN_x4plus.pth',
+     '4x_NMKD-Siax_200k.pth'
+ ]]
 
-# # SAM检测加载器
-# [download(dataset_repo='mofashi/comfy', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/models/sams/{file_name}') 
-#  for file_name in [
-#      'sam_vit_b_01ec64.pth'
-#  ]]
+# SAM检测加载器
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/sams/{file_name}') 
+ for file_name in [
+     'sam_vit_b_01ec64.pth'
+ ]]
 
-# # SAM2检测加载器
-# [download(dataset_repo='mofashi/comfy', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/models/sam2/{file_name}') 
-#  for file_name in [
-#      'sam2_hiera_base_plus.safetensors'
-#  ]]
+# SAM2检测加载器
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/sam2/{file_name}') 
+ for file_name in [
+     'sam2_hiera_base_plus.safetensors'
+ ]]
 
-# # bbox检测面部模型
-# [download(dataset_repo='mofashi/comfy', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/models/ultralytics/bbox/{file_name}') 
-#  for file_name in [
-#      'face_yolov8m.pt'
-#  ]]
-# # controlnet
-# [download(dataset_repo='mofashi/comfy', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
-#  for file_name in [
-#      'InstantID-controlnet.safetensors'
-#  ]]
+# bbox检测面部模型
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/ultralytics/bbox/{file_name}') 
+ for file_name in [
+     'face_yolov8m.pt'
+ ]]
+# controlnet
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
+ for file_name in [
+     'InstantID-controlnet.safetensors'
+ ]]
 
-# # 数据集2-controlnet
-# [download(dataset_repo='mofashi/comfy2', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
-#  for file_name in [
-#      'FLUX-dev-Controlnet-Inpainting-Alpha.safetensors'
-#  ]]
-# # 数据集2- lora
-# [download(dataset_repo='mofashi/comfy2', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/models/loras/{file_name}') 
-#  for file_name in [
-#      'Flux-小红书真实写真.safetensors',
-#      '山水诗行_flux版',
-#      '极氪白白酱Flux-人像V6MAX'
-#  ]]
+# 数据集2-controlnet
+[download(dataset_repo='mofashi/comfy2', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
+ for file_name in [
+     'FLUX-dev-Controlnet-Inpainting-Alpha.safetensors'
+ ]]
+# 数据集2- lora
+[download(dataset_repo='mofashi/comfy2', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/loras/{file_name}') 
+ for file_name in [
+     'Flux-小红书真实写真.safetensors',
+     '山水诗行_flux版',
+     '极氪白白酱Flux-人像V6MAX'
+ ]]
 
-# # id换脸模型
-# [download(dataset_repo='mofashi/comfy', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/models/instantid/{file_name}') 
-#  for file_name in [
-#      'ip-adapter.bin'
-#  ]]
+# id换脸模型
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/models/instantid/{file_name}') 
+ for file_name in [
+     'ip-adapter.bin'
+ ]]
 
-# 子包
-# [download(dataset_repo='mofashi/comfy', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack/{file_name}') 
-#  for file_name in [
-#      'impact_subpack.zip'
-#  ]]
 
 # 设置目标目录
 target_dir = '/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack/'
@@ -269,24 +262,24 @@ if os.path.exists(zip_file_path):
 else:
     print(f"{zip_file_path} 不存在或者解压失败")
 
-# # 大模型
-# os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
-# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-%E5%A2%A8%E5%B9%BD%E4%BA%BA%E9%80%A0%E4%BA%BAXL_v2010-Flux-RF.safetensors?ref=main&nonce=1726399393393 -o MYHuman-墨幽人造人XL-v2010-Flux-RF.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('MYHuman-墨幽人造人XL-v2010-Flux-RF下载完成')
+# 大模型
+os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-%E5%A2%A8%E5%B9%BD%E4%BA%BA%E9%80%A0%E4%BA%BAXL_v2010-Flux-RF.safetensors?ref=main&nonce=1726399393393 -o MYHuman-墨幽人造人XL-v2010-Flux-RF.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('MYHuman-墨幽人造人XL-v2010-Flux-RF下载完成')
 
-# os.chdir(f"/home/xlab-app-center/models/unet") # 模型仓库，unet文件夹
-# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8原始.safetensors?ref=main&nonce=1725931610381 -o flux1-dev-fp8原始.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('flux1-dev-fp8原始下载完成')
-# # subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-Flux%E5%8E%9F%E9%9A%8F%E6%8B%8D-fp16-1.1.safetensors?ref=main&nonce=1726185742539 -o MYHuman-Flux原随拍-fp16-1.1.safetensors",shell=True)
-# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-F.1-%E5%8E%9F%E5%A2%A8%E5%B9%BD%E9%9A%8F%E6%8B%8D-v1-%E9%9A%8F%E6%8B%8D.safetensors?ref=main&nonce=1726204698330 -o MYHuman-F.1-原墨幽随拍-v1-随拍.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('原墨幽随拍-v1-随拍下载完成')
-# # subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/CogVideoX_5b_fp8_4em.safetensors?ref=main&nonce=1726813815633 -o CogVideoX_5b_fp8_4em.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('CogVideoX_5b_fp8_4em下载完成')
+os.chdir(f"/home/xlab-app-center/models/unet") # 模型仓库，unet文件夹
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8原始.safetensors?ref=main&nonce=1725931610381 -o flux1-dev-fp8原始.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('flux1-dev-fp8原始下载完成')
+# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-Flux%E5%8E%9F%E9%9A%8F%E6%8B%8D-fp16-1.1.safetensors?ref=main&nonce=1726185742539 -o MYHuman-Flux原随拍-fp16-1.1.safetensors",shell=True)
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-F.1-%E5%8E%9F%E5%A2%A8%E5%B9%BD%E9%9A%8F%E6%8B%8D-v1-%E9%9A%8F%E6%8B%8D.safetensors?ref=main&nonce=1726204698330 -o MYHuman-F.1-原墨幽随拍-v1-随拍.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('原墨幽随拍-v1-随拍下载完成')
+# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/CogVideoX_5b_fp8_4em.safetensors?ref=main&nonce=1726813815633 -o CogVideoX_5b_fp8_4em.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('CogVideoX_5b_fp8_4em下载完成')
 
 
-# os.chdir(f"/home/xlab-app-center/models/loras") #模型仓库，lora文件夹
-# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/%E7%AD%91%E6%A2%A6F.1_INS%E6%BB%A4%E9%95%9C_v1.0.safetensors?ref=main&nonce=1726186206302 -o 筑梦F.1_INS滤镜_v1.0.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('筑梦F.1_INS滤镜下载完成')
+os.chdir(f"/home/xlab-app-center/models/loras") #模型仓库，lora文件夹
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/%E7%AD%91%E6%A2%A6F.1_INS%E6%BB%A4%E9%95%9C_v1.0.safetensors?ref=main&nonce=1726186206302 -o 筑梦F.1_INS滤镜_v1.0.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('筑梦F.1_INS滤镜下载完成')
 
-# os.makedirs("/home/xlab-app-center/models/LLM", exist_ok=True) # 目录不存在则自动创建
-# os.chdir(f"/home/xlab-app-center/models/LLM") # 模型仓库，LLM文件夹
-# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/chatglm3-8bit.safetensors?ref=main&nonce=1725936486503 -o chatglm3-8bit.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('chatglm3-8bit下载完成')
-# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/Florence-2-large-PromptGen-v1.5.safetensors?ref=main&nonce=1727138430530 -o Florence-2-large-PromptGen-v1.5.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('Florence-2-large-PromptGen-v1.5下载完成')
+os.makedirs("/home/xlab-app-center/models/LLM", exist_ok=True) # 目录不存在则自动创建
+os.chdir(f"/home/xlab-app-center/models/LLM") # 模型仓库，LLM文件夹
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/chatglm3-8bit.safetensors?ref=main&nonce=1725936486503 -o chatglm3-8bit.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('chatglm3-8bit下载完成')
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/Florence-2-large-PromptGen-v1.5.safetensors?ref=main&nonce=1727138430530 -o Florence-2-large-PromptGen-v1.5.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('Florence-2-large-PromptGen-v1.5下载完成')
 
 
           
