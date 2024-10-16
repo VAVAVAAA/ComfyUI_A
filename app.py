@@ -222,12 +222,14 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
 #  ]]
 
 # 子包
-[download(dataset_repo='mofashi/comfy', 
-          source_path=file_name, 
-          target_path=f'/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack/{file_name}') 
- for file_name in [
-     'impact_subpack.zip'
- ]]
+# [download(dataset_repo='mofashi/comfy', 
+#           source_path=file_name, 
+#           target_path=f'/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack/{file_name}') 
+#  for file_name in [
+#      'impact_subpack.zip'
+#  ]]
+from openxlab.dataset import download
+download(dataset_repo='mofashi/comfy',source_path='/impact_subpack.zip', target_path='/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack/') #数据集文件下载
 
 os.chdir(f"/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
 directory = '/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack'
