@@ -261,11 +261,11 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
 #---------------------------------------------------------------------------
 # 设置目标目录
 target_dir = '/home/xlab-app-center/models/Joy_caption_two/'
-source_file_path = os.path.join(target_dir, 'mofashi___comfy', 'cgrkzexw-599808.zip')
-target_file_path = os.path.join(target_dir, 'cgrkzexw-599808.zip')
+source_file_path = os.path.join(target_dir, 'mofashi___comfy', 'text_model.zip')
+target_file_path = os.path.join(target_dir, 'text_model.zip')
 
 # 下载数据集
-download(dataset_repo='mofashi/comfy', source_path='cgrkzexw-599808.zip', target_path=target_dir)
+download(dataset_repo='mofashi/comfy', source_path='text_model.zip', target_path=target_dir)
 
 # 确认下载结果并移动文件
 if os.path.exists(source_file_path):
@@ -276,7 +276,7 @@ else:
      
 # 查找压缩包并解压
 os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
-zip_file_path = "cgrkzexw-599808.zip"
+zip_file_path = "text_model.zip"
 if os.path.exists(zip_file_path):
     subprocess.run(f"unzip {zip_file_path}", shell=True)
     print("文件解压完成")
