@@ -36,7 +36,7 @@ os.system("pip install py-cpuinfo")
 os.system("pip install pynvml")
 os.system("pip install iopath")
 os.system("pip install webcolors")
-
+os.system(f"git lfs install")
 
 # os.chdir(f"/home/xlab-app-center")
 # 插件
