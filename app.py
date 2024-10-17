@@ -258,6 +258,47 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
 # else:
 #     print(f"{zip_file_path} 不存在或者解压失败")
 
+#---------------------------------------------------------------------------
+# 设置目标目录
+target_dir = '/home/xlab-app-center/models/Joy_caption_two/'
+source_file_path = os.path.join(target_dir, 'mofashi___comfy', 'cgrkzexw-599808.zip')
+target_file_path = os.path.join(target_dir, 'cgrkzexw-599808.zip')
+
+# 下载数据集
+download(dataset_repo='mofashi/comfy', source_path='cgrkzexw-599808.zip', target_path=target_dir)
+
+# 确认下载结果并移动文件
+if os.path.exists(source_file_path):
+    shutil.move(source_file_path, target_file_path)
+    print(f"文件已成功移动到: {target_file_path}")
+else:
+    print("下载的文件不存在，请检查下载过程。")
+     
+os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
+directory = '/home/xlab-app-center/models/Joy_caption_two'
+
+# 尝试获取目录中的所有文件和文件夹
+try:
+    files_and_dirs = os.listdir(directory)
+    # 打印所有文件和文件夹
+    for item in files_and_dirs:
+        print(item)
+except FileNotFoundError:
+    print(f"目录 '{directory}' 不存在。请检查路径是否正确。")
+
+# 查找压缩包并解压
+os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
+zip_file_path = "cgrkzexw-599808.zip"
+if os.path.exists(zip_file_path):
+    subprocess.run(f"unzip {zip_file_path}", shell=True)
+    print("文件解压完成")
+
+    # 删除压缩包
+    os.remove(zip_file_path)
+    print(f"已删除压缩包 {zip_file_path}")
+else:
+    print(f"{zip_file_path} 不存在或者解压失败")
+
 # # 大模型
 # os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
 # subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-%E5%A2%A8%E5%B9%BD%E4%BA%BA%E9%80%A0%E4%BA%BAXL_v2010-Flux-RF.safetensors?ref=main&nonce=1726399393393 -o MYHuman-墨幽人造人XL-v2010-Flux-RF.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('MYHuman-墨幽人造人XL-v2010-Flux-RF下载完成')
@@ -273,43 +314,6 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
 # os.makedirs("/home/xlab-app-center/models/LLM", exist_ok=True) # 目录不存在则自动创建
 # os.chdir(f"/home/xlab-app-center/models/LLM") # 模型仓库，LLM文件夹
 # subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/Florence-2-large-PromptGen-v1.5.safetensors?ref=main&nonce=1727138430530 -o Florence-2-large-PromptGen-v1.5.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('Florence-2-large-PromptGen-v1.5下载完成')
-
-# os.makedirs("/home/xlab-app-center/models/Joy_caption_two", exist_ok=True)
-# os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
-# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/cgrkzexw-599808.tar?ref=main&nonce=1729138121492 -o cgrkzexw-599808.tar",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('cgrkzexw-599808.tar下载完成')
-# os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
-# zip_file_path = "cgrkzexw-599808.tar"
-# if os.path.exists(zip_file_path):
-#     subprocess.run(f"tar -xf {zip_file_path}", shell=True)
-#     print("文件解压完成")
-
-#     # 删除压缩包
-#     os.remove(zip_file_path)
-#     print(f"已删除压缩包 {zip_file_path}")
-# else:
-#     print(f"{zip_file_path} 不存在或者解压失败")
-
-os.chdir(f"/home/xlab-app-center/models/Joy_caption_two/")
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/cgrkzexw-599808.tar?ref=main&nonce=1729138121492 -o cgrkzexw-599808.tar && tar -x -f cgrkzexw-599808.tar --directory='/home/xlab-app-center/models/Joy_caption_two/' && rm /home/xlab-app-center/models/Joy_caption_two/cui.tar.lz4", shell=True);print('cgrkzexw-599808.tar 下载完成')
-os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
-# 解压缩文件
-# subprocess.run("tar -xf cgrkzexw-599808.tar --directory=/home/xlab-app-center/models/Joy_caption_two", shell=True)
-# print('解压缩完成')
-# # 删除原始的 .tar 文件
-# os.remove("cgrkzexw-599808.tar")
-# print('cgrkzexw-599808.tar 已删除')
-
-os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
-directory = '/home/xlab-app-center/models/Joy_caption_two'
-
-# 尝试获取目录中的所有文件和文件夹
-try:
-    files_and_dirs = os.listdir(directory)
-    # 打印所有文件和文件夹
-    for item in files_and_dirs:
-        print(item)
-except FileNotFoundError:
-    print(f"目录 '{directory}' 不存在。请检查路径是否正确。")
 
 
 os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
