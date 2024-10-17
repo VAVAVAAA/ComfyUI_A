@@ -274,8 +274,12 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
 # os.chdir(f"/home/xlab-app-center/models/LLM") # 模型仓库，LLM文件夹
 # subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/Florence-2-large-PromptGen-v1.5.safetensors?ref=main&nonce=1727138430530 -o Florence-2-large-PromptGen-v1.5.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('Florence-2-large-PromptGen-v1.5下载完成')
 
-os.system(f"git clone https://mofashi:6b533bcba6ba55afa126256cfd006d46f4eeda4f@code.openxlab.org.cn/mofashi/joy.git /home/xlab-app-center/models/Joy_caption_two")
-
+# os.system(f"git clone https://mofashi:6b533bcba6ba55afa126256cfd006d46f4eeda4f@code.openxlab.org.cn/mofashi/joy.git /home/xlab-app-center/models/Joy_caption_two")
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/cgrkzexw-599808.tar?ref=main&nonce=1729138121492 -o cgrkzexw-599808.tar",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('cgrkzexw-599808.tar下载完成')
+subprocess.run("tar -xf cgrkzexw-599808.tar --directory=/path/to/destination",shell=True);print('解压缩完成')
+# 删除原始的 .tar 文件
+os.remove("cgrkzexw-599808.tar")
+print('cgrkzexw-599808.tar 已删除')
 
 # os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
 directory = '/home/xlab-app-center/models/Joy_caption_two'
