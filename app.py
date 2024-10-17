@@ -289,7 +289,7 @@ if os.path.exists(zip_file_path):
 else:
     print(f"{zip_file_path} 不存在或者解压失败")
 
-# os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
+os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
 directory = '/home/xlab-app-center/models/Joy_caption_two'
 
 # 尝试获取目录中的所有文件和文件夹
