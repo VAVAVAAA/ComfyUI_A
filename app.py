@@ -277,7 +277,7 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
 os.makedirs("/home/xlab-app-center/models/Joy_caption_two", exist_ok=True)
 os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/cgrkzexw-599808.tar?ref=main&nonce=1729138121492 -o cgrkzexw-599808.tar",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('cgrkzexw-599808.tar下载完成')
-# os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
+os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
 zip_file_path = "cgrkzexw-599808.tar"
 if os.path.exists(zip_file_path):
     subprocess.run(f"tar -xf {zip_file_path}", shell=True)
