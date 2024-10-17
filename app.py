@@ -5,6 +5,9 @@ from openxlab.dataset import download
 import subprocess
 import zipfile
 import requests
+
+# 全局环境变量
+subprocess.run(['export', 'HF_ENDPOINT=https://hf-mirror.com'], shell=True)
 # 环境
 os.system("pip install --upgrade transformers==4.44.2")
 os.system("pip install torch==2.4.1")
@@ -282,7 +285,7 @@ os.chdir(f"/home/xlab-app-center/models/LLM") # 模型仓库，LLM文件夹
 # subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/chatglm3-8bit.safetensors?ref=main&nonce=1725936486503 -o chatglm3-8bit.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('chatglm3-8bit下载完成')
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/Florence-2-large-PromptGen-v1.5.safetensors?ref=main&nonce=1727138430530 -o Florence-2-large-PromptGen-v1.5.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('Florence-2-large-PromptGen-v1.5下载完成')
 
-
+os.system(f"git clone https://mofashi:6b533bcba6ba55afa126256cfd006d46f4eeda4f@code.openxlab.org.cn/mofashi/joy.git /home/xlab-app-center/models/Joy_caption_two")
           
 os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
 #os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
