@@ -126,7 +126,8 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
      'Zenpainting禅意插画08.safetensors',
      'UIA插画古风山水艺术06.safetensors',
      'FLUX-Turbo-Alpha.safetensors',
-     '美学艺术Aestheticsart.safetensors'
+     '美学艺术Aestheticsart.safetensors',
+     'aidmaFLUXpro1.1-FLUX-V0.2.safetensors'
  ]]
 # vae
 [download(dataset_repo='mofashi/comfy', 
