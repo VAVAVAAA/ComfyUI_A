@@ -274,18 +274,6 @@ if os.path.exists(source_file_path):
 else:
     print("下载的文件不存在，请检查下载过程。")
      
-os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
-directory = '/home/xlab-app-center/models/Joy_caption_two'
-
-# 尝试获取目录中的所有文件和文件夹
-try:
-    files_and_dirs = os.listdir(directory)
-    # 打印所有文件和文件夹
-    for item in files_and_dirs:
-        print(item)
-except FileNotFoundError:
-    print(f"目录 '{directory}' 不存在。请检查路径是否正确。")
-
 # 查找压缩包并解压
 os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
 zip_file_path = "cgrkzexw-599808.zip"
@@ -298,6 +286,18 @@ if os.path.exists(zip_file_path):
     print(f"已删除压缩包 {zip_file_path}")
 else:
     print(f"{zip_file_path} 不存在或者解压失败")
+
+os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
+directory = '/home/xlab-app-center/models/Joy_caption_two'
+
+# 尝试获取目录中的所有文件和文件夹
+try:
+    files_and_dirs = os.listdir(directory)
+    # 打印所有文件和文件夹
+    for item in files_and_dirs:
+        print(item)
+except FileNotFoundError:
+    print(f"目录 '{directory}' 不存在。请检查路径是否正确。")
 
 # # 大模型
 # os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
