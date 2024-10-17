@@ -275,7 +275,21 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xla
 # subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/Florence-2-large-PromptGen-v1.5.safetensors?ref=main&nonce=1727138430530 -o Florence-2-large-PromptGen-v1.5.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('Florence-2-large-PromptGen-v1.5下载完成')
 
 os.system(f"git clone https://mofashi:6b533bcba6ba55afa126256cfd006d46f4eeda4f@code.openxlab.org.cn/mofashi/joy.git /home/xlab-app-center/models/Joy_caption_two")
-          
+
+
+# os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
+directory = '/home/xlab-app-center/models/Joy_caption_two'
+
+# 尝试获取目录中的所有文件和文件夹
+try:
+    files_and_dirs = os.listdir(directory)
+    # 打印所有文件和文件夹
+    for item in files_and_dirs:
+        print(item)
+except FileNotFoundError:
+    print(f"目录 '{directory}' 不存在。请检查路径是否正确。")
+
+
 os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
 #os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
 #os.system(f"python main.py --cpu --listen 0.0.0.0 --port 7860 --enable-cors-header")
