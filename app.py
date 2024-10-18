@@ -365,17 +365,6 @@ shutil.move(source_file, destination_dir)
 print(f"文件已移动到 {destination_dir}")
 
 
-# 定义目录路径
-dir_path = "/home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation/zh-CN/Nodes"
-
-# 打印目录下的所有文件和子目录
-if os.path.exists(dir_path):
-    files = os.listdir(dir_path)
-    print(f"{dir_path} 下的文件和子目录: {files}")
-else:
-    print(f"目录不存在: {dir_path}")
-
-
 #-------------------------------------------------------------
 os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
 #os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
