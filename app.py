@@ -289,7 +289,7 @@ else:
 
 #------------------------------------------------------------
 # 设置目标目录
-target_dir = '/home/xlab-app-center/models/clip/siglip-so400m-patch14-384'
+target_dir = '/home/xlab-app-center/models/clip'
 source_file_path = os.path.join(target_dir, 'mofashi___comfy', 'siglip-so400m-patch14-384.zip')
 target_file_path = os.path.join(target_dir, 'siglip-so400m-patch14-384.zip')
 
@@ -304,7 +304,7 @@ else:
     print("下载的文件不存在，请检查下载过程。")
      
 # 查找压缩包并解压
-os.chdir(f"/home/xlab-app-center/models/clip/siglip-so400m-patch14-384")
+os.chdir(f"/home/xlab-app-center/models/clip/")
 zip_file_path = "text_model.zip"
 if os.path.exists(zip_file_path):
     subprocess.run(f"unzip {zip_file_path}", shell=True)
@@ -316,8 +316,8 @@ if os.path.exists(zip_file_path):
 else:
     print(f"{zip_file_path} 不存在或者解压失败")
           
-os.chdir(f"/home/xlab-app-center/models/clip/siglip-so400m-patch14-384")
-directory = '/home/xlab-app-center/models/clip/siglip-so400m-patch14-384'
+os.chdir(f"/home/xlab-app-center/models/clip")
+directory = '/home/xlab-app-center/models/clip'
 
 # 尝试获取目录中的所有文件和文件夹
 try:
