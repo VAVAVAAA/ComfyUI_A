@@ -364,13 +364,15 @@ output_file = r"/home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation
 subprocess.run(["curl", "-o", output_file, file_url], check=True)
 print(f"文件已成功下载到 {output_file}")
 
-# 定义文件路径
-file_path = "/home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation/zh-CN/Nodes/Comfyui_SLK_joy_caption_two.json"
-# 检查文件是否存在
-if os.path.exists(file_path):
-    print(f"文件存在: {file_path}")
+# 定义目录路径
+dir_path = "/home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation/zh-CN/Nodes"
+
+# 打印目录下的所有文件和子目录
+if os.path.exists(dir_path):
+    files = os.listdir(dir_path)
+    print(f"{dir_path} 下的文件和子目录: {files}")
 else:
-    print(f"文件不存在: {file_path}")
+    print(f"目录不存在: {dir_path}")
 
 
 #-------------------------------------------------------------
