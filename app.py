@@ -89,7 +89,7 @@ os.system(f"git clone https://git.homegu.com/cubiq/ComfyUI_InstantID /home/xlab-
 os.system(f"git clone https://git.homegu.com/crystian/ComfyUI-Crystools /home/xlab-app-center/custom_nodes/ComfyUI-Crystools") # 性能检测
 os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-PyramidFlowWrapper /home/xlab-app-center/custom_nodes/ComfyUI-PyramidFlowWrapper") # 10/12ai视频模型
 os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xlab-app-center/custom_nodes/ComfyUI-FluxTrainer") # lora训练
-
+os.system(f"git clone https://git.homegu.com/logtd/ComfyUI-Fluxtapoz /home/xlab-app-center/custom_nodes/ComfyUI-Fluxtapoz") #类风格迁移
 
 
 # 大模型
