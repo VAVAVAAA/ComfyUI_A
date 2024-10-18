@@ -287,6 +287,17 @@ if os.path.exists(zip_file_path):
 else:
     print(f"{zip_file_path} 不存在或者解压失败")
 
+# 定义文件路径
+old_file = "/home/xlab-app-center/models/Joy_caption_two/cgrkzexw-599808_config.yaml"
+new_file = "/home/xlab-app-center/models/Joy_caption_two/config.yaml"
+
+# 检查文件是否存在并重命名
+if os.path.exists(old_file):
+    os.rename(old_file, new_file)
+    print(f"文件已重命名为: {new_file}")
+else:
+    print(f"文件未找到: {old_file}")
+
 #------------------------------------------------------------
 # 设置目标目录
 target_dir = '/home/xlab-app-center/models/clip'
