@@ -364,6 +364,15 @@ output_file = r"/home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation
 subprocess.run(["curl", "-o", output_file, file_url], check=True)
 print(f"文件已成功下载到 {output_file}")
 
+# 定义文件路径
+file_path = "/home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation/zh-CN/Nodes/Comfyui_SLK_joy_caption_two.json"
+# 检查文件是否存在
+if os.path.exists(file_path):
+    print(f"文件存在: {file_path}")
+else:
+    print(f"文件不存在: {file_path}")
+
+
 #-------------------------------------------------------------
 os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
 #os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
