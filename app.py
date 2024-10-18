@@ -360,7 +360,7 @@ except FileNotFoundError:
 # 文件的 raw URL
 file_url = "https://raw.githubusercontent.com/EvilBT/ComfyUI_SLK_joy_caption_two/refs/heads/main/translation/zh-CN/Nodes/Comfyui_SLK_joy_caption_two.json"
 # 保存文件的路径
-output_file = "/home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation\zh-CN\Nodes"
+output_file = r"/home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation\zh-CN\Nodes"
 subprocess.run(["curl", "-o", output_file, file_url], check=True)
 print(f"文件已成功下载到 {output_file}")
 
