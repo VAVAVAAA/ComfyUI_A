@@ -287,8 +287,37 @@ if os.path.exists(zip_file_path):
 else:
     print(f"{zip_file_path} 不存在或者解压失败")
 
-os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
-directory = '/home/xlab-app-center/models/Joy_caption_two'
+#------------------------------------------------------------
+# 设置目标目录
+target_dir = '/home/xlab-app-center/models/clip/siglip-so400m-patch14-384'
+source_file_path = os.path.join(target_dir, 'mofashi___comfy', 'siglip-so400m-patch14-384.zip')
+target_file_path = os.path.join(target_dir, 'siglip-so400m-patch14-384.zip')
+
+# 下载数据集
+download(dataset_repo='mofashi/comfy', source_path='siglip-so400m-patch14-384.zip', target_path=target_dir)
+
+# 确认下载结果并移动文件
+if os.path.exists(source_file_path):
+    shutil.move(source_file_path, target_file_path)
+    print(f"文件已成功移动到: {target_file_path}")
+else:
+    print("下载的文件不存在，请检查下载过程。")
+     
+# 查找压缩包并解压
+os.chdir(f"/home/xlab-app-center/models/clip/siglip-so400m-patch14-384")
+zip_file_path = "text_model.zip"
+if os.path.exists(zip_file_path):
+    subprocess.run(f"unzip {zip_file_path}", shell=True)
+    print("文件解压完成")
+
+    # 删除压缩包
+    os.remove(zip_file_path)
+    print(f"已删除压缩包 {zip_file_path}")
+else:
+    print(f"{zip_file_path} 不存在或者解压失败")
+          
+os.chdir(f"/home/xlab-app-center/models/clip/siglip-so400m-patch14-384")
+directory = '/home/xlab-app-center/models/clip/siglip-so400m-patch14-384'
 
 # 尝试获取目录中的所有文件和文件夹
 try:
