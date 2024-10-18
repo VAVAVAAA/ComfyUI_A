@@ -305,7 +305,7 @@ else:
      
 # 查找压缩包并解压
 os.chdir(f"/home/xlab-app-center/models/clip/")
-zip_file_path = "text_model.zip"
+zip_file_path = "siglip-so400m-patch14-384.zip"
 if os.path.exists(zip_file_path):
     subprocess.run(f"unzip {zip_file_path}", shell=True)
     print("文件解压完成")
