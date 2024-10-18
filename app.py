@@ -356,6 +356,14 @@ except FileNotFoundError:
 # subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/Florence-2-large-PromptGen-v1.5.safetensors?ref=main&nonce=1727138430530 -o Florence-2-large-PromptGen-v1.5.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('Florence-2-large-PromptGen-v1.5下载完成')
 
 
+#os.chdir(f"/home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation\zh-CN\Nodes")
+# 文件的 raw URL
+file_url = "https://raw.githubusercontent.com/EvilBT/ComfyUI_SLK_joy_caption_two/refs/heads/main/translation/zh-CN/Nodes/Comfyui_SLK_joy_caption_two.json"
+# 保存文件的路径
+output_file = "/home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation\zh-CN\Nodes"
+subprocess.run(["curl", "-o", output_file, file_url], check=True)
+print(f"文件已成功下载到 {output_file}")
+
 #-------------------------------------------------------------
 os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
 #os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
