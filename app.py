@@ -360,9 +360,15 @@ subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dn
 source_file = "/home/xlab-app-center/custom_nodes/ComfyUI_SLK_joy_caption_two/translation/zh-CN/Nodes/Comfyui_SLK_joy_caption_two.json"
 # 目标目录路径
 destination_dir = "/home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation/zh-CN/Nodes"
-# 移动文件
-shutil.move(source_file, destination_dir)
-print(f"文件已移动到 {destination_dir}")
+# 目标文件路径
+destination_file = os.path.join(destination_dir, os.path.basename(source_file))
+
+# 判断目标文件是否存在
+if os.path.exists(destination_file):
+    print(f"文件已存在，跳过移动: {destination_file}")
+else:
+    shutil.move(source_file, destination_dir)
+    print(f"文件已移动到 {destination_dir}")
 
 
 #-------------------------------------------------------------
