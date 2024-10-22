@@ -106,7 +106,6 @@ os.system(f"git clone https://git.homegu.com/logtd/ComfyUI-Fluxtapoz /home/xlab-
           target_path=f'/home/xlab-app-center/models/unet/{file_name}') 
  for file_name in [
      'ketu_fp16.safetensors', 
-     'CogVideoX_5b_fun_GGUF_Q4_0.safetensors',
      'CogVideoX_5b_fun_1_1_GGUF_Q4_0.safetensors'
      
  ]]
@@ -353,7 +352,7 @@ subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dn
 
 os.makedirs("/home/xlab-app-center/models/LLM", exist_ok=True) # 目录不存在则自动创建
 os.chdir(f"/home/xlab-app-center/models/LLM") # 模型仓库，LLM文件夹
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/Florence-2-large-PromptGen-v1.5.safetensors?ref=main&nonce=1727138430530 -o Florence-2-large-PromptGen-v1.5.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('Florence-2-large-PromptGen-v1.5下载完成')
+# subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/Florence-2-large-PromptGen-v1.5.safetensors?ref=main&nonce=1727138430530 -o Florence-2-large-PromptGen-v1.5.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('Florence-2-large-PromptGen-v1.5下载完成')
 
 
 # 源文件路径
