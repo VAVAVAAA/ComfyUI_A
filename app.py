@@ -90,6 +90,7 @@ os.system(f"git clone https://git.homegu.com/crystian/ComfyUI-Crystools /home/xl
 os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-PyramidFlowWrapper /home/xlab-app-center/custom_nodes/ComfyUI-PyramidFlowWrapper") # 10/12ai视频模型
 os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xlab-app-center/custom_nodes/ComfyUI-FluxTrainer") # lora训练
 os.system(f"git clone https://git.homegu.com/logtd/ComfyUI-Fluxtapoz /home/xlab-app-center/custom_nodes/ComfyUI-Fluxtapoz") #类风格迁移
+os.system(f"git clone https://git.homegu.com/mutek/Cryptocat /home/xlab-app-center/custom_nodes/Cryptocat") #工作流加密
 
 
 # 大模型
