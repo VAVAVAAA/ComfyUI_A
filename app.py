@@ -218,45 +218,45 @@ os.system(f"git clone https://git.homegu.com/mutek/Cryptocat /home/xlab-app-cent
  ]]
 
 
-# 设置目标目录
-target_dir = '/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack/'
-source_file_path = os.path.join(target_dir, 'mofashi___comfy', 'impact_subpack.zip')
-target_file_path = os.path.join(target_dir, 'impact_subpack.zip')
+# # 设置目标目录
+# target_dir = '/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack/'
+# source_file_path = os.path.join(target_dir, 'mofashi___comfy', 'impact_subpack.zip')
+# target_file_path = os.path.join(target_dir, 'impact_subpack.zip')
 
-# 下载数据集
-download(dataset_repo='mofashi/comfy', source_path='impact_subpack.zip', target_path=target_dir)
+# # 下载数据集
+# download(dataset_repo='mofashi/comfy', source_path='impact_subpack.zip', target_path=target_dir)
 
-# 确认下载结果并移动文件
-if os.path.exists(source_file_path):
-    shutil.move(source_file_path, target_file_path)
-    print(f"文件已成功移动到: {target_file_path}")
-else:
-    print("下载的文件不存在，请检查下载过程。")
+# # 确认下载结果并移动文件
+# if os.path.exists(source_file_path):
+#     shutil.move(source_file_path, target_file_path)
+#     print(f"文件已成功移动到: {target_file_path}")
+# else:
+#     print("下载的文件不存在，请检查下载过程。")
      
+# # os.chdir(f"/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
+# # directory = '/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack'
+
+# # # 尝试获取目录中的所有文件和文件夹
+# # try:
+# #     files_and_dirs = os.listdir(directory)
+# #     # 打印所有文件和文件夹
+# #     for item in files_and_dirs:
+# #         print(item)
+# # except FileNotFoundError:
+# #     print(f"目录 '{directory}' 不存在。请检查路径是否正确。")
+
+# # 查找压缩包并解压
 # os.chdir(f"/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
-# directory = '/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack'
+# zip_file_path = "impact_subpack.zip"
+# if os.path.exists(zip_file_path):
+#     subprocess.run(f"unzip {zip_file_path}", shell=True)
+#     print("文件解压完成")
 
-# # 尝试获取目录中的所有文件和文件夹
-# try:
-#     files_and_dirs = os.listdir(directory)
-#     # 打印所有文件和文件夹
-#     for item in files_and_dirs:
-#         print(item)
-# except FileNotFoundError:
-#     print(f"目录 '{directory}' 不存在。请检查路径是否正确。")
-
-# 查找压缩包并解压
-os.chdir(f"/home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
-zip_file_path = "impact_subpack.zip"
-if os.path.exists(zip_file_path):
-    subprocess.run(f"unzip {zip_file_path}", shell=True)
-    print("文件解压完成")
-
-    # 删除压缩包
-    os.remove(zip_file_path)
-    print(f"已删除压缩包 {zip_file_path}")
-else:
-    print(f"{zip_file_path} 不存在或者解压失败")
+#     # 删除压缩包
+#     os.remove(zip_file_path)
+#     print(f"已删除压缩包 {zip_file_path}")
+# else:
+#     print(f"{zip_file_path} 不存在或者解压失败")
 
 #---------------------------------------------------------------------------
 # 设置目标目录
@@ -356,20 +356,24 @@ os.chdir(f"/home/xlab-app-center/models/LLM") # 模型仓库，LLM文件夹
 # subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/Florence-2-large-PromptGen-v1.5.safetensors?ref=main&nonce=1727138430530 -o Florence-2-large-PromptGen-v1.5.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('Florence-2-large-PromptGen-v1.5下载完成')
 
 
-# 源文件路径
-source_file = "/home/xlab-app-center/custom_nodes/ComfyUI_SLK_joy_caption_two/translation/zh-CN/Nodes/Comfyui_SLK_joy_caption_two.json"
-# 目标目录路径
-destination_dir = "/home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation/zh-CN/Nodes"
-# 目标文件路径
-destination_file = os.path.join(destination_dir, os.path.basename(source_file))
+# 定义源目录和目标目录
+src_dir = '/home/xlab-app-center/custom_nodes/ComfyUI_SLK_joy_caption_two/translation/zh-CN/Nodes'
+dst_dir = '/home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation/zh-CN/Nodes'
 
-# 判断目标文件是否存在
-if os.path.exists(destination_file):
-    print(f"文件已存在，跳过移动: {destination_file}")
-else:
-    shutil.move(source_file, destination_dir)
-    print(f"文件已移动到 {destination_dir}")
+# 如果目标目录不存在，则创建
+os.makedirs(dst_dir, exist_ok=True)
 
+# 遍历源目录下的所有文件
+for file_name in os.listdir(src_dir):
+    src_file = os.path.join(src_dir, file_name)
+    dst_file = os.path.join(dst_dir, file_name)
+    
+    # 移动文件
+    try:
+        shutil.move(src_file, dst_file)
+        print(f"Moved: {src_file} -> {dst_file}")
+    except Exception as e:
+        print(f"Failed to move {src_file}: {e}")
 
 #-------------------------------------------------------------
 os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
