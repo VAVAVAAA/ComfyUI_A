@@ -56,7 +56,7 @@ os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-KJNodes /home/xlab-ap
 
 os.system(f"git clone https://git.homegu.com/john-mnz/ComfyUI-Inspyrenet-Rembg /home/xlab-app-center/custom_nodes/ComfyUI-Inspyrenet-Rembg") # 抠背景
 os.system(f"git clone https://git.homegu.com/Fannovel16/comfyui_controlnet_aux /home/xlab-app-center/custom_nodes/comfyui_controlnet_aux")
-os.system(f"git clone https://git.homegu.com/ltdrdata/ComfyUI-Impact-Pack /home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
+os.system(f"git clone https://git.homegu.com/ltdrdata/ComfyUI-Impact-Pack  impact_subpack /home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack")
 # os.system(f"git clone https://git.homegu.com/ltdrdata/ComfyUI-Impact-Subpack /home/xlab-app-center/custom_nodes/ComfyUI-Impact-Subpack")
 os.system(f"git clone https://git.homegu.com/ltdrdata/ComfyUI-Inspire-Pack /home/xlab-app-center/custom_nodes/ComfyUI-Inspire-Pack")
 
