@@ -355,26 +355,6 @@ os.makedirs("/home/xlab-app-center/models/LLM", exist_ok=True) # 目录不存在
 os.chdir(f"/home/xlab-app-center/models/LLM") # 模型仓库，LLM文件夹
 # subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/Florence-2-large-PromptGen-v1.5.safetensors?ref=main&nonce=1727138430530 -o Florence-2-large-PromptGen-v1.5.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('Florence-2-large-PromptGen-v1.5下载完成')
 
-
-# 定义源目录和目标目录
-src_dir = '/home/xlab-app-center/custom_nodes/ComfyUI_SLK_joy_caption_two/translation/zh-CN/Nodes'
-dst_dir = '/home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation/zh-CN/Nodes'
-
-# 如果目标目录不存在，则创建
-os.makedirs(dst_dir, exist_ok=True)
-
-# 遍历源目录下的所有文件
-for file_name in os.listdir(src_dir):
-    src_file = os.path.join(src_dir, file_name)
-    dst_file = os.path.join(dst_dir, file_name)
-    
-    # 移动文件
-    try:
-        shutil.move(src_file, dst_file)
-        print(f"Moved: {src_file} -> {dst_file}")
-    except Exception as e:
-        print(f"Failed to move {src_file}: {e}")
-
 #-------------------------------------------------------------
 os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
 #os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
