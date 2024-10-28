@@ -38,57 +38,58 @@ os.system(f"git lfs install")
 
 # os.chdir(f"/home/xlab-app-center")
 # 插件
-os.system(f"git clone https://git.homegu.com/ltdrdata/ComfyUI-Manager /home/xlab-app-center/custom_nodes/ComfyUI-Manager")
-os.system(f"git clone https://git.homegu.com/ty0x2333/ComfyUI-Dev-Utils /home/xlab-app-center/custom_nodes/ComfyUI-Dev-Utils") # 显示节点运行时间
+base_url = "https://git.homegu.com"
+os.system(f"git clone {base_url}/ltdrdata/ComfyUI-Manager /home/xlab-app-center/custom_nodes/ComfyUI-Manager")
+os.system(f"git clone {base_url}/ty0x2333/ComfyUI-Dev-Utils /home/xlab-app-center/custom_nodes/ComfyUI-Dev-Utils") # 显示节点运行时间
 # os.system(f"git clone https://git.homegu.com/Nuked88/ComfyUI-N-Sidebar /home/xlab-app-center/custom_nodes/ComfyUI-N-Sidebar")
-os.system(f"git clone https://git.homegu.com/AIGODLIKE/AIGODLIKE-ComfyUI-Translation /home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation")
-os.system(f"git clone https://git.homegu.com/rgthree/rgthree-comfy /home/xlab-app-center/custom_nodes/rgthree-comfy")
+os.system(f"git clone {base_url}/AIGODLIKE/AIGODLIKE-ComfyUI-Translation /home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation")
+os.system(f"git clone {base_url}/rgthree/rgthree-comfy /home/xlab-app-center/custom_nodes/rgthree-comfy")
 
-os.system(f"git clone https://git.homegu.com/MinusZoneAI/ComfyUI-Kolors-MZ /home/xlab-app-center/custom_nodes/ComfyUI-Kolors-MZ") # 可图
-os.system(f"git clone https://git.homegu.com/SeaArtLab/comfyui_storydiffusion /home/xlab-app-center/custom_nodes/comfyui_storydiffusion") # 可图
+os.system(f"git clone {base_url}/MinusZoneAI/ComfyUI-Kolors-MZ /home/xlab-app-center/custom_nodes/ComfyUI-Kolors-MZ") # 可图
+os.system(f"git clone {base_url}/SeaArtLab/comfyui_storydiffusion /home/xlab-app-center/custom_nodes/comfyui_storydiffusion") # 可图
 #os.system(f"git clone https://git.homegu.com/yolain/ComfyUI-Easy-Use /home/xlab-app-center/custom_nodes/ComfyUI-Easy-Use")
-os.system(f"git clone https://git.homegu.com/VAVAVAAA/ComfyUI-Easy-Use-A /home/xlab-app-center/custom_nodes/ComfyUI-Easy-Use-A") # 自己fork仓库的
+os.system(f"git clone {base_url}/VAVAVAAA/ComfyUI-Easy-Use-A /home/xlab-app-center/custom_nodes/ComfyUI-Easy-Use-A") # 自己fork仓库的
 #os.system(f"git clone https://git.homegu.com/xinsir6/ControlNetPlus /home/xlab-app-center/custom_nodes/ControlNetPlus") # 全能xl调用
-os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-segment-anything-2 /home/xlab-app-center/custom_nodes/ComfyUI-segment-anything-2") # 第二代抠图
-os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-KJNodes /home/xlab-app-center/custom_nodes/ComfyUI-KJNodes")
+os.system(f"git clone {base_url}/kijai/ComfyUI-segment-anything-2 /home/xlab-app-center/custom_nodes/ComfyUI-segment-anything-2") # 第二代抠图
+os.system(f"git clone {base_url}/kijai/ComfyUI-KJNodes /home/xlab-app-center/custom_nodes/ComfyUI-KJNodes")
 
-os.system(f"git clone https://git.homegu.com/john-mnz/ComfyUI-Inspyrenet-Rembg /home/xlab-app-center/custom_nodes/ComfyUI-Inspyrenet-Rembg") # 抠背景
-os.system(f"git clone https://git.homegu.com/Fannovel16/comfyui_controlnet_aux /home/xlab-app-center/custom_nodes/comfyui_controlnet_aux")
-os.system(f"git clone https://git.homegu.com/ltdrdata/ComfyUI-Impact-Pack /home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack impact_subpack")
+os.system(f"git clone {base_url}/john-mnz/ComfyUI-Inspyrenet-Rembg /home/xlab-app-center/custom_nodes/ComfyUI-Inspyrenet-Rembg") # 抠背景
+os.system(f"git clone {base_url}/Fannovel16/comfyui_controlnet_aux /home/xlab-app-center/custom_nodes/comfyui_controlnet_aux")
+os.system(f"git clone {base_url}/ltdrdata/ComfyUI-Impact-Pack /home/xlab-app-center/custom_nodes/ComfyUI-Impact-Pack impact_subpack")
 # os.system(f"git clone https://git.homegu.com/ltdrdata/ComfyUI-Impact-Subpack /home/xlab-app-center/custom_nodes/ComfyUI-Impact-Subpack")
-os.system(f"git clone https://git.homegu.com/ltdrdata/ComfyUI-Inspire-Pack /home/xlab-app-center/custom_nodes/ComfyUI-Inspire-Pack")
+os.system(f"git clone {base_url}/ltdrdata/ComfyUI-Inspire-Pack /home/xlab-app-center/custom_nodes/ComfyUI-Inspire-Pack")
 
-os.system(f"git clone https://git.homegu.com/cubiq/ComfyUI_IPAdapter_plus /home/xlab-app-center/custom_nodes/ComfyUI_IPAdapter_plus")
-os.system(f"git clone https://git.homegu.com/Kosinkadink/ComfyUI-VideoHelperSuite /home/xlab-app-center/custom_nodes/ComfyUI-VideoHelperSuite")
-os.system(f"git clone https://git.homegu.com/Nourepide/ComfyUI-Allor /home/xlab-app-center/custom_nodes/ComfyUI-Allor")
-os.system(f"git clone https://git.homegu.com/EvilBT/ComfyUI_SLK_joy_caption_two  /home/xlab-app-center/custom_nodes/ComfyUI_SLK_joy_caption_two ") # joy_caption2代
+os.system(f"git clone {base_url}/cubiq/ComfyUI_IPAdapter_plus /home/xlab-app-center/custom_nodes/ComfyUI_IPAdapter_plus")
+os.system(f"git clone {base_url}/Kosinkadink/ComfyUI-VideoHelperSuite /home/xlab-app-center/custom_nodes/ComfyUI-VideoHelperSuite")
+os.system(f"git clone {base_url}/Nourepide/ComfyUI-Allor /home/xlab-app-center/custom_nodes/ComfyUI-Allor")
+os.system(f"git clone {base_url}/EvilBT/ComfyUI_SLK_joy_caption_two  /home/xlab-app-center/custom_nodes/ComfyUI_SLK_joy_caption_two ") # joy_caption2代
 # os.system(f"git clone https://git.homegu.com/miaoshouai/ComfyUI-Miaoshouai-Tagger /home/xlab-app-center/custom_nodes/ComfyUI-Miaoshouai-Tagger") # 全新的视觉反推模型，显存更小
-os.system(f"git clone https://git.homegu.com/siliconflow/BizyAir /home/xlab-app-center/custom_nodes/BizyAir") # 满血版反推
+os.system(f"git clone {base_url}/siliconflow/BizyAir /home/xlab-app-center/custom_nodes/BizyAir") # 满血版反推
 
-os.system(f"git clone https://git.homegu.com/pythongosssss/ComfyUI-Custom-Scripts /home/xlab-app-center/custom_nodes/ComfyUI-Custom-Scripts")
-os.system(f"git clone https://git.homegu.com/melMass/comfy_mtb /home/xlab-app-center/custom_nodes/comfy_mtb")
-os.system(f"git clone https://git.homegu.com/chflame163/ComfyUI_LayerStyle /home/xlab-app-center/custom_nodes/ComfyUI_LayerStyle")
-os.system(f"git clone https://git.homegu.com/cubiq/ComfyUI_essentials /home/xlab-app-center/custom_nodes/ComfyUI_essentials")
-os.system(f"git clone https://git.homegu.com/chrisgoringe/cg-use-everywhere /home/xlab-app-center/custom_nodes/cg-use-everywhere")
-os.system(f"git clone https://git.homegu.com/chrisgoringe/cg-image-picker /home/xlab-app-center/custom_nodes/cg-image-picker")
-os.system(f"git clone https://git.homegu.com/ssitu/ComfyUI_UltimateSDUpscale /home/xlab-app-center/custom_nodes/ComfyUI_UltimateSDUpscale --recursive")
+os.system(f"git clone {base_url}/pythongosssss/ComfyUI-Custom-Scripts /home/xlab-app-center/custom_nodes/ComfyUI-Custom-Scripts")
+os.system(f"git clone {base_url}/melMass/comfy_mtb /home/xlab-app-center/custom_nodes/comfy_mtb")
+os.system(f"git clone {base_url}/chflame163/ComfyUI_LayerStyle /home/xlab-app-center/custom_nodes/ComfyUI_LayerStyle")
+os.system(f"git clone {base_url}/cubiq/ComfyUI_essentials /home/xlab-app-center/custom_nodes/ComfyUI_essentials")
+os.system(f"git clone {base_url}/chrisgoringe/cg-use-everywhere /home/xlab-app-center/custom_nodes/cg-use-everywhere")
+os.system(f"git clone {base_url}/chrisgoringe/cg-image-picker /home/xlab-app-center/custom_nodes/cg-image-picker")
+os.system(f"git clone {base_url}/ssitu/ComfyUI_UltimateSDUpscale /home/xlab-app-center/custom_nodes/ComfyUI_UltimateSDUpscale --recursive")
 
-os.system(f"git clone https://git.homegu.com/M1kep/ComfyLiterals /home/xlab-app-center/custom_nodes/ComfyLiterals") # 字符串节点
-os.system(f"git clone https://git.homegu.com/lquesada/ComfyUI-Inpaint-CropAndStitch /home/xlab-app-center/custom_nodes/ComfyUI-Inpaint-CropAndStitch") # 重绘
-os.system(f"git clone https://git.homegu.com/erosDiffusion/ComfyUI-enricos-nodes /home/xlab-app-center/custom_nodes/ComfyUI-enricos-nodes") # 自定义构图
-os.system(f"git clone https://git.homegu.com/WASasquatch/was-node-suite-comfyui /home/xlab-app-center/custom_nodes/was-node-suite-comfyui") 
-os.system(f"git clone https://git.homegu.com/Fannovel16/ComfyUI-Frame-Interpolation /home/xlab-app-center/custom_nodes/ComfyUI-Frame-Interpolation") # 视频补帧
-os.system(f"git clone https://git.homegu.com/MinusZoneAI/ComfyUI-CogVideoX-MZ /home/xlab-app-center/custom_nodes/ComfyUI-CogVideoX-MZ") # 图生视频
-os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-CogVideoXWrapper /home/xlab-app-center/custom_nodes/ComfyUI-CogVideoXWrapper") # 图生视频，与上面搭配使用
-os.system(f"git clone https://git.homegu.com/TTPlanetPig/Comfyui_TTP_Toolset /home/xlab-app-center/custom_nodes/Comfyui_TTP_Toolset") # flux放大
-os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-Florence2 /home/xlab-app-center/custom_nodes/ComfyUI-Florence2")
-os.system(f"git clone https://git.homegu.com/shiimizu/ComfyUI-PhotoMaker-Plus /home/xlab-app-center/custom_nodes/ComfyUI-PhotoMaker-Plus") # 换脸
-os.system(f"git clone https://git.homegu.com/cubiq/ComfyUI_InstantID /home/xlab-app-center/custom_nodes/ComfyUI_InstantID") # 换脸
-os.system(f"git clone https://git.homegu.com/crystian/ComfyUI-Crystools /home/xlab-app-center/custom_nodes/ComfyUI-Crystools") # 性能检测
-os.system(f"git clone https://git.homegu.com/tatookan/comfuinoda-Navyblue /home/xlab-app-center/custom_nodes/comfuinoda-Navyblue") # sigme分离加细节
-os.system(f"git clone https://git.homegu.com/kijai/ComfyUI-FluxTrainer /home/xlab-app-center/custom_nodes/ComfyUI-FluxTrainer") # lora训练
-os.system(f"git clone https://git.homegu.com/logtd/ComfyUI-Fluxtapoz /home/xlab-app-center/custom_nodes/ComfyUI-Fluxtapoz") #类风格迁移
-os.system(f"git clone https://git.homegu.com/mutek/Cryptocat /home/xlab-app-center/custom_nodes/Cryptocat") #工作流加密
+os.system(f"git clone {base_url}/M1kep/ComfyLiterals /home/xlab-app-center/custom_nodes/ComfyLiterals") # 字符串节点
+os.system(f"git clone {base_url}/lquesada/ComfyUI-Inpaint-CropAndStitch /home/xlab-app-center/custom_nodes/ComfyUI-Inpaint-CropAndStitch") # 重绘
+os.system(f"git clone {base_url}/erosDiffusion/ComfyUI-enricos-nodes /home/xlab-app-center/custom_nodes/ComfyUI-enricos-nodes") # 自定义构图
+os.system(f"git clone {base_url}/WASasquatch/was-node-suite-comfyui /home/xlab-app-center/custom_nodes/was-node-suite-comfyui") 
+os.system(f"git clone {base_url}/Fannovel16/ComfyUI-Frame-Interpolation /home/xlab-app-center/custom_nodes/ComfyUI-Frame-Interpolation") # 视频补帧
+os.system(f"git clone {base_url}/MinusZoneAI/ComfyUI-CogVideoX-MZ /home/xlab-app-center/custom_nodes/ComfyUI-CogVideoX-MZ") # 图生视频
+os.system(f"git clone {base_url}/kijai/ComfyUI-CogVideoXWrapper /home/xlab-app-center/custom_nodes/ComfyUI-CogVideoXWrapper") # 图生视频，与上面搭配使用
+os.system(f"git clone {base_url}/TTPlanetPig/Comfyui_TTP_Toolset /home/xlab-app-center/custom_nodes/Comfyui_TTP_Toolset") # flux放大
+os.system(f"git clone {base_url}/kijai/ComfyUI-Florence2 /home/xlab-app-center/custom_nodes/ComfyUI-Florence2")
+os.system(f"git clone {base_url}/shiimizu/ComfyUI-PhotoMaker-Plus /home/xlab-app-center/custom_nodes/ComfyUI-PhotoMaker-Plus") # 换脸
+os.system(f"git clone {base_url}/cubiq/ComfyUI_InstantID /home/xlab-app-center/custom_nodes/ComfyUI_InstantID") # 换脸
+os.system(f"git clone {base_url}/crystian/ComfyUI-Crystools /home/xlab-app-center/custom_nodes/ComfyUI-Crystools") # 性能检测
+os.system(f"git clone {base_url}/tatookan/comfuinoda-Navyblue /home/xlab-app-center/custom_nodes/comfuinoda-Navyblue") # sigme分离加细节
+os.system(f"git clone {base_url}/kijai/ComfyUI-FluxTrainer /home/xlab-app-center/custom_nodes/ComfyUI-FluxTrainer") # lora训练
+os.system(f"git clone {base_url}/logtd/ComfyUI-Fluxtapoz /home/xlab-app-center/custom_nodes/ComfyUI-Fluxtapoz") #类风格迁移
+os.system(f"git clone {base_url}/mutek/Cryptocat /home/xlab-app-center/custom_nodes/Cryptocat") #工作流加密
 
 
 # 大模型
