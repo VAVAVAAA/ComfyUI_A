@@ -38,7 +38,7 @@ os.system(f"git lfs install")
 
 # os.chdir(f"/home/xlab-app-center")
 # 插件
-base_url = "https://git.homegu.com"
+base_url = "https://github.com"
 os.system(f"git clone {base_url}/ltdrdata/ComfyUI-Manager /home/xlab-app-center/custom_nodes/ComfyUI-Manager")
 os.system(f"git clone {base_url}/ty0x2333/ComfyUI-Dev-Utils /home/xlab-app-center/custom_nodes/ComfyUI-Dev-Utils") # 显示节点运行时间
 # os.system(f"git clone https://git.homegu.com/Nuked88/ComfyUI-N-Sidebar /home/xlab-app-center/custom_nodes/ComfyUI-N-Sidebar")
