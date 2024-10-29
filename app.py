@@ -90,7 +90,8 @@ os.system(f"git clone {base_url}/tatookan/comfuinoda-Navyblue /home/xlab-app-cen
 os.system(f"git clone {base_url}/kijai/ComfyUI-FluxTrainer /home/xlab-app-center/custom_nodes/ComfyUI-FluxTrainer") # lora训练
 os.system(f"git clone {base_url}/logtd/ComfyUI-Fluxtapoz /home/xlab-app-center/custom_nodes/ComfyUI-Fluxtapoz") #类风格迁移
 os.system(f"git clone {base_url}/mutek/Cryptocat /home/xlab-app-center/custom_nodes/Cryptocat") #工作流加密
-
+os.system(f"git clone {base_url}/stormcenter/ComfyUI-AutoSplitGridImage /home/xlab-app-center/custom_nodes/ComfyUI-AutoSplitGridImage") #一张图的切割，与下面的插件搭配
+os.system(f"git clone {base_url}/kinfolk0117/ComfyUI_GridSwapper /home/xlab-app-center/custom_nodes/ComfyUI_GridSwapper") #网格技术生成的面部一致性保持
 
 # 大模型
 [download(dataset_repo='mofashi/comfy', 
