@@ -348,7 +348,8 @@ subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dn
 os.chdir(f"/home/xlab-app-center/models/unet") # 模型仓库，unet文件夹
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8原始.safetensors?ref=main&nonce=1725931610381 -o flux1-dev-fp8原始.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('flux1-dev-fp8原始下载完成')
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-F.1-%E5%8E%9F%E5%A2%A8%E5%B9%BD%E9%9A%8F%E6%8B%8D-v1-%E9%9A%8F%E6%8B%8D.safetensors?ref=main&nonce=1726204698330 -o MYHuman-F.1-原墨幽随拍-v1-随拍.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('原墨幽随拍-v1-随拍下载完成')
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://download.openxlab.org.cn/repos/file/mofashi/comfy2/main?filepath=pixelwave_flux1Dev03.safetensors&sign=f145bbad6a3f5271bacd8dd7c3fb219f&nonce=1730166831451 -o pixelwave_flux1Dev03.safetensors",shell=True);print('pixelwave_flux1Dev03风格模型下载完成')
+subprocess.run('aria2c -c -x 16 -s 16 -k 1M --async-dns=false --check-certificate=false "https://download.openxlab.org.cn/repos/file/mofashi/comfy2/main?filepath=pixelwave_flux1Dev03.safetensors&sign=f145bbad6a3f5271bacd8dd7c3fb219f&nonce=1730166831451" -o pixelwave_flux1Dev03.safetensors', shell=True);print('pixelwave_flux1Dev03风格模型下载完成')
+
 
 
 os.chdir(f"/home/xlab-app-center/models/loras") #模型仓库，lora文件夹
