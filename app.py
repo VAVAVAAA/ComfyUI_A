@@ -342,6 +342,8 @@ except FileNotFoundError:
 # 大模型
 os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-%E5%A2%A8%E5%B9%BD%E4%BA%BA%E9%80%A0%E4%BA%BAXL_v2010-Flux-RF.safetensors?ref=main&nonce=1726399393393 -o MYHuman-墨幽人造人XL-v2010-Flux-RF.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('MYHuman-墨幽人造人XL-v2010-Flux-RF下载完成')
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://www.modelscope.cn/models/AI-ModelScope/stable-diffusion-3.5-large/resolve/master/sd3.5_large.safetensors -o sd3.5_large.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('sd3.5_large下载完成')
+
 
 os.chdir(f"/home/xlab-app-center/models/unet") # 模型仓库，unet文件夹
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8原始.safetensors?ref=main&nonce=1725931610381 -o flux1-dev-fp8原始.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('flux1-dev-fp8原始下载完成')
