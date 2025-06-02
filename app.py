@@ -34,6 +34,7 @@ os.system("pip install py-cpuinfo")
 os.system("pip install pynvml")
 os.system("pip install iopath")
 os.system("pip install webcolors")
+os.system("pip install loguru")
 os.system(f"git lfs install")
 
 # os.chdir(f"/home/xlab-app-center")
@@ -61,7 +62,6 @@ os.system(f"git clone {base_url}/ltdrdata/ComfyUI-Inspire-Pack /home/xlab-app-ce
 
 os.system(f"git clone {base_url}/cubiq/ComfyUI_IPAdapter_plus /home/xlab-app-center/custom_nodes/ComfyUI_IPAdapter_plus")
 os.system(f"git clone {base_url}/Kosinkadink/ComfyUI-VideoHelperSuite /home/xlab-app-center/custom_nodes/ComfyUI-VideoHelperSuite")
-os.system(f"git clone {base_url}/Nourepide/ComfyUI-Allor /home/xlab-app-center/custom_nodes/ComfyUI-Allor")
 os.system(f"git clone {base_url}/EvilBT/ComfyUI_SLK_joy_caption_two  /home/xlab-app-center/custom_nodes/ComfyUI_SLK_joy_caption_two ") # joy_caption2代
 # os.system(f"git clone https://git.homegu.com/miaoshouai/ComfyUI-Miaoshouai-Tagger /home/xlab-app-center/custom_nodes/ComfyUI-Miaoshouai-Tagger") # 全新的视觉反推模型，显存更小
 os.system(f"git clone {base_url}/siliconflow/BizyAir /home/xlab-app-center/custom_nodes/BizyAir") # 满血版反推
@@ -155,24 +155,24 @@ os.system(f"git clone https://git.homegu.com/chflame163/ComfyUI_LayerStyle_Advan
      'flux_vae.safetensors',
  ]]
 # clip模型
-[download(dataset_repo='mofashi/comfy', 
-          source_path=file_name, 
-          target_path=f'/home/xlab-app-center/models/clip/{file_name}') 
- for file_name in [
-     'ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors', 
-     'clip_l.safetensors',
-     't5xxl_fp8_e4m3fn.safetensors'
- ]]
+# [download(dataset_repo='mofashi/comfy', 
+#           source_path=file_name, 
+#           target_path=f'/home/xlab-app-center/models/clip/{file_name}') 
+#  for file_name in [
+#      'ViT-L-14-TEXT-detail-improved-hiT-GmP-TE-only-HF.safetensors', 
+#      'clip_l.safetensors',
+#      't5xxl_fp8_e4m3fn.safetensors'
+#  ]]
 
 # 放大模型
-[download(dataset_repo='mofashi/comfy', 
-          source_path=file_name, 
-          target_path=f'/home/xlab-app-center/models/upscale_models/{file_name}') 
- for file_name in [
-     '4xNomos8kSCHAT-L.pth', 
-     'RealESRGAN_x4plus.pth',
-     '4x_NMKD-Siax_200k.pth'
- ]]
+# [download(dataset_repo='mofashi/comfy', 
+#           source_path=file_name, 
+#           target_path=f'/home/xlab-app-center/models/upscale_models/{file_name}') 
+#  for file_name in [
+#      '4xNomos8kSCHAT-L.pth', 
+#      'RealESRGAN_x4plus.pth',
+#      '4x_NMKD-Siax_200k.pth'
+#  ]]
 
 # SAM检测加载器
 [download(dataset_repo='mofashi/comfy', 
@@ -198,37 +198,31 @@ os.system(f"git clone https://git.homegu.com/chflame163/ComfyUI_LayerStyle_Advan
      'face_yolov8m.pt'
  ]]
 # controlnet
-[download(dataset_repo='mofashi/comfy', 
-          source_path=file_name, 
-          target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
- for file_name in [
-     'InstantID-controlnet.safetensors'
- ]]
+# [download(dataset_repo='mofashi/comfy', 
+#           source_path=file_name, 
+#           target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
+#  for file_name in [
+#      'InstantID-controlnet.safetensors'
+#  ]]
 
-# 数据集2-controlnet
-[download(dataset_repo='mofashi/comfy2', 
-          source_path=file_name, 
-          target_path=f'/home/xlab-app-center/models/controlnet/{file_name}') 
- for file_name in [
-     'FLUX-dev-Controlnet-Inpainting-Alpha.safetensors'
- ]]
+
 # 数据集2- lora
-[download(dataset_repo='mofashi/comfy2', 
-          source_path=file_name, 
-          target_path=f'/home/xlab-app-center/models/loras/{file_name}') 
- for file_name in [
-     'Flux-小红书真实写真.safetensors',
-     '山水诗行_flux版',
-     '极氪白白酱Flux-人像V6MAX'
- ]]
+# [download(dataset_repo='mofashi/comfy2', 
+#           source_path=file_name, 
+#           target_path=f'/home/xlab-app-center/models/loras/{file_name}') 
+#  for file_name in [
+#      'Flux-小红书真实写真.safetensors',
+#      '山水诗行_flux版',
+#      '极氪白白酱Flux-人像V6MAX'
+#  ]]
 
 # id换脸模型
-[download(dataset_repo='mofashi/comfy', 
-          source_path=file_name, 
-          target_path=f'/home/xlab-app-center/models/instantid/{file_name}') 
- for file_name in [
-     'ip-adapter.bin'
- ]]
+# [download(dataset_repo='mofashi/comfy', 
+#           source_path=file_name, 
+#           target_path=f'/home/xlab-app-center/models/instantid/{file_name}') 
+#  for file_name in [
+#      'ip-adapter.bin'
+#  ]]
 
 
 # # 设置目标目录
@@ -272,85 +266,85 @@ os.system(f"git clone https://git.homegu.com/chflame163/ComfyUI_LayerStyle_Advan
 #     print(f"{zip_file_path} 不存在或者解压失败")
 
 #---------------------------------------------------------------------------
-# 设置目标目录
-target_dir = '/home/xlab-app-center/models/Joy_caption_two/'
-source_file_path = os.path.join(target_dir, 'mofashi___comfy', 'text_model.zip')
-target_file_path = os.path.join(target_dir, 'text_model.zip')
+# # 设置目标目录
+# target_dir = '/home/xlab-app-center/models/Joy_caption_two/'
+# source_file_path = os.path.join(target_dir, 'mofashi___comfy', 'text_model.zip')
+# target_file_path = os.path.join(target_dir, 'text_model.zip')
 
-# 下载数据集
-download(dataset_repo='mofashi/comfy', source_path='text_model.zip', target_path=target_dir)
+# # 下载数据集
+# download(dataset_repo='mofashi/comfy', source_path='text_model.zip', target_path=target_dir)
 
-# 确认下载结果并移动文件
-if os.path.exists(source_file_path):
-    shutil.move(source_file_path, target_file_path)
-    print(f"文件已成功移动到: {target_file_path}")
-else:
-    print("下载的文件不存在，请检查下载过程。")
+# # 确认下载结果并移动文件
+# if os.path.exists(source_file_path):
+#     shutil.move(source_file_path, target_file_path)
+#     print(f"文件已成功移动到: {target_file_path}")
+# else:
+#     print("下载的文件不存在，请检查下载过程。")
      
-# 查找压缩包并解压
-os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
-zip_file_path = "text_model.zip"
-if os.path.exists(zip_file_path):
-    subprocess.run(f"unzip {zip_file_path}", shell=True)
-    print("文件解压完成")
+# # 查找压缩包并解压
+# os.chdir(f"/home/xlab-app-center/models/Joy_caption_two")
+# zip_file_path = "text_model.zip"
+# if os.path.exists(zip_file_path):
+#     subprocess.run(f"unzip {zip_file_path}", shell=True)
+#     print("文件解压完成")
 
-    # 删除压缩包
-    os.remove(zip_file_path)
-    print(f"已删除压缩包 {zip_file_path}")
-else:
-    print(f"{zip_file_path} 不存在或者解压失败")
+#     # 删除压缩包
+#     os.remove(zip_file_path)
+#     print(f"已删除压缩包 {zip_file_path}")
+# else:
+#     print(f"{zip_file_path} 不存在或者解压失败")
 
-# 定义文件路径
-old_file = "/home/xlab-app-center/models/Joy_caption_two/cgrkzexw-599808_config.yaml"
-new_file = "/home/xlab-app-center/models/Joy_caption_two/config.yaml"
+# # 定义文件路径
+# old_file = "/home/xlab-app-center/models/Joy_caption_two/cgrkzexw-599808_config.yaml"
+# new_file = "/home/xlab-app-center/models/Joy_caption_two/config.yaml"
 
-# 检查文件是否存在并重命名
-if os.path.exists(old_file):
-    os.rename(old_file, new_file)
-    print(f"文件已重命名为: {new_file}")
-else:
-    print(f"文件未找到: {old_file}")
+# # 检查文件是否存在并重命名
+# if os.path.exists(old_file):
+#     os.rename(old_file, new_file)
+#     print(f"文件已重命名为: {new_file}")
+# else:
+#     print(f"文件未找到: {old_file}")
 
 #------------------------------------------------------------
-# 设置目标目录
-target_dir = '/home/xlab-app-center/models/clip'
-source_file_path = os.path.join(target_dir, 'mofashi___comfy', 'siglip-so400m-patch14-384.zip')
-target_file_path = os.path.join(target_dir, 'siglip-so400m-patch14-384.zip')
+# # 设置目标目录
+# target_dir = '/home/xlab-app-center/models/clip'
+# source_file_path = os.path.join(target_dir, 'mofashi___comfy', 'siglip-so400m-patch14-384.zip')
+# target_file_path = os.path.join(target_dir, 'siglip-so400m-patch14-384.zip')
 
-# 下载数据集
-download(dataset_repo='mofashi/comfy', source_path='siglip-so400m-patch14-384.zip', target_path=target_dir)
+# # 下载数据集
+# download(dataset_repo='mofashi/comfy', source_path='siglip-so400m-patch14-384.zip', target_path=target_dir)
 
-# 确认下载结果并移动文件
-if os.path.exists(source_file_path):
-    shutil.move(source_file_path, target_file_path)
-    print(f"文件已成功移动到: {target_file_path}")
-else:
-    print("下载的文件不存在，请检查下载过程。")
+# # 确认下载结果并移动文件
+# if os.path.exists(source_file_path):
+#     shutil.move(source_file_path, target_file_path)
+#     print(f"文件已成功移动到: {target_file_path}")
+# else:
+#     print("下载的文件不存在，请检查下载过程。")
      
-# 查找压缩包并解压
-os.chdir(f"/home/xlab-app-center/models/clip/")
-zip_file_path = "siglip-so400m-patch14-384.zip"
-if os.path.exists(zip_file_path):
-    subprocess.run(f"unzip {zip_file_path}", shell=True)
-    print("文件解压完成")
+# # 查找压缩包并解压
+# os.chdir(f"/home/xlab-app-center/models/clip/")
+# zip_file_path = "siglip-so400m-patch14-384.zip"
+# if os.path.exists(zip_file_path):
+#     subprocess.run(f"unzip {zip_file_path}", shell=True)
+#     print("文件解压完成")
 
-    # 删除压缩包
-    os.remove(zip_file_path)
-    print(f"已删除压缩包 {zip_file_path}")
-else:
-    print(f"{zip_file_path} 不存在或者解压失败")
+#     # 删除压缩包
+#     os.remove(zip_file_path)
+#     print(f"已删除压缩包 {zip_file_path}")
+# else:
+#     print(f"{zip_file_path} 不存在或者解压失败")
           
-os.chdir(f"/home/xlab-app-center/models/clip")
-directory = '/home/xlab-app-center/models/clip'
+# os.chdir(f"/home/xlab-app-center/models/clip")
+# directory = '/home/xlab-app-center/models/clip'
 
-# 尝试获取目录中的所有文件和文件夹
-try:
-    files_and_dirs = os.listdir(directory)
-    # 打印所有文件和文件夹
-    for item in files_and_dirs:
-        print(item)
-except FileNotFoundError:
-    print(f"目录 '{directory}' 不存在。请检查路径是否正确。")
+# # 尝试获取目录中的所有文件和文件夹
+# try:
+#     files_and_dirs = os.listdir(directory)
+#     # 打印所有文件和文件夹
+#     for item in files_and_dirs:
+#         print(item)
+# except FileNotFoundError:
+#     print(f"目录 '{directory}' 不存在。请检查路径是否正确。")
 
 # 大模型
 os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
