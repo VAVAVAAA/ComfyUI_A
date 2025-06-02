@@ -36,6 +36,7 @@ os.system("pip install iopath")
 os.system("pip install webcolors")
 os.system("pip install loguru")
 os.system("pip install typer_config")
+os.system("pip install omegaconf")
 os.system(f"git lfs install")
 
 # os.chdir(f"/home/xlab-app-center")
