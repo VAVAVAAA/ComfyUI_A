@@ -372,6 +372,12 @@ os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型�
 #os.chdir(f"/home/xlab-app-center/models/LLM") # 模型仓库，LLM文件夹
 # subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/Florence-2-large-PromptGen-v1.5.safetensors?ref=main&nonce=1727138430530 -o Florence-2-large-PromptGen-v1.5.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('Florence-2-large-PromptGen-v1.5下载完成')
 
+
+
+os.makedirs("/home/xlab-app-center/models/lama", exist_ok=True)
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://cdn-xlab-data.openxlab.org.cn/objects/344c77bbcb158f17dd143070d1e789f38a66c04202311ae3a258ef66667a9ea9?Expires=1748946483&OSSAccessKeyId=LTAI5tSqABbitQcgeNNd8dAE&Signature=QjZ%2FdhTOfH5Uv70nJBMPp1a95qo%3D&response-content-disposition=attachment%3B%20filename%3D%22big-lama.pt%22&response-content-type=application%2Foctet-stream -o big-lama.pt",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('big-lama.pt下载完成')
+
+
 #-------------------------------------------------------------
 os.chdir(f"/home/xlab-app-center")# 启动文件（勿动！）
 #os.system(f"python main.py --listen 0.0.0.0 --port 7860 --enable-cors-header")
