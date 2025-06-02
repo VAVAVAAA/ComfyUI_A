@@ -116,13 +116,13 @@ os.system(f"git clone {base_url}/chflame163/ComfyUI_LayerStyle_Advance /home/xla
  ]]
 
 # unet模型
-[download(dataset_repo='mofashi/comfy', 
-          source_path=file_name, 
-          target_path=f'/home/xlab-app-center/models/unet/{file_name}') 
- for file_name in [
-     'ketu_fp16.safetensors'
+# [download(dataset_repo='mofashi/comfy', 
+#           source_path=file_name, 
+#           target_path=f'/home/xlab-app-center/models/unet/{file_name}') 
+#  for file_name in [
+#      'ketu_fp16.safetensors'
      
- ]]
+#  ]]
 # lora
 [download(dataset_repo='mofashi/comfy', 
           source_path=file_name, 
