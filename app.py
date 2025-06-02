@@ -100,24 +100,42 @@ os.system(f"git clone {base_url}/chflame163/ComfyUI_LayerStyle_Advance /home/xla
 
 
 
-# ai去水印，lama
-[download(dataset_repo='mofashi/comfy', 
-          source_path=file_name, 
-          target_path=f'/home/xlab-app-center/ComfyUI/models/lama/{file_name}') 
- for file_name in [
-     'big-lama.pt'
- ]]
+# # ai去水印，lama
+# [download(dataset_repo='mofashi/comfy', 
+#           source_path=file_name, 
+#           target_path=f'/home/xlab-app-center/ComfyUI/models/lama/{file_name}') 
+#  for file_name in [
+#      'big-lama.pt'
+#  ]]
 
-# 2. 移动文件到目标位置
-src = '/home/xlab-app-center/ComfyUI/models/lama/mofashi___comfy/big-lama.pt'
-dst = '/home/xlab-app-center/ComfyUI/models/lama/big-lama.pt'
+# # 2. 移动文件到目标位置
+# src = '/home/xlab-app-center/ComfyUI/models/lama/big-lama.pt/mofashi___comfy/big-lama.p
+# t'
+# dst = '/home/xlab-app-center/ComfyUI/models/lama/'
 
-if os.path.exists(src):
-    os.makedirs(os.path.dirname(dst), exist_ok=True)  # 确保目录存在
-    shutil.move(src, dst)  # 移动文件
-    print(f"✅ 文件已移动到: {dst}")
+# if os.path.exists(src):
+#     os.makedirs(os.path.dirname(dst), exist_ok=True)  # 确保目录存在
+#     shutil.move(src, dst)  # 移动文件
+#     print(f"✅ 文件已移动到: {dst}")
+# else:
+#     print("❌ 文件下载失败，请检查路径！")
+
+
+
+# 设置目标目录
+target_dir = '/home/xlab-app-center/ComfyUI/models/lama/'
+source_file_path = os.path.join(target_dir, 'mofashi___comfy', 'big-lama.pt')
+target_file_path = os.path.join(target_dir, 'big-lama.pt')
+
+# 下载数据集
+download(dataset_repo='mofashi/comfy', source_path='big-lama.pt', target_path=target_dir)
+
+# 确认下载结果并移动文件
+if os.path.exists(source_file_path):
+    shutil.move(source_file_path, target_file_path)
+    print(f"文件已成功移动到: {target_file_path}")
 else:
-    print("❌ 文件下载失败，请检查路径！")
+    print("下载的文件不存在，请检查下载过程。")
 
 
 
