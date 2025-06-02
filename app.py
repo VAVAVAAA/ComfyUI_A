@@ -94,6 +94,19 @@ os.system(f"git clone {base_url}/stormcenter/ComfyUI-AutoSplitGridImage /home/xl
 os.system(f"git clone {base_url}/kinfolk0117/ComfyUI_GridSwapper /home/xlab-app-center/custom_nodes/ComfyUI_GridSwapper") #网格技术生成的面部一致性保持
 os.system(f"git clone {base_url}/leadbreak/comfyui-faceaging /home/xlab-app-center/custom_nodes/comfyui-faceaging") #年龄变化-50到100岁
 
+os.system(f"git clone https://git.homegu.com/chflame163/ComfyUI_LayerStyle_Advance /home/xlab-app-center/ComfyUI/custom_nodes/ComfyUI_LayerStyle_Advance")
+
+
+
+
+# ai去水印，lama
+[download(dataset_repo='mofashi/comfy', 
+          source_path=file_name, 
+          target_path=f'/home/xlab-app-center/ComfyUI/models/lama/{file_name}') 
+ for file_name in [
+     'big-lama.pt'
+ ]]
+
 
 # 大模型
 [download(dataset_repo='mofashi/comfy', 
@@ -343,24 +356,24 @@ except FileNotFoundError:
 
 # 大模型
 os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型文件夹
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-%E5%A2%A8%E5%B9%BD%E4%BA%BA%E9%80%A0%E4%BA%BAXL_v2010-Flux-RF.safetensors?ref=main&nonce=1726399393393 -o MYHuman-墨幽人造人XL-v2010-Flux-RF.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('MYHuman-墨幽人造人XL-v2010-Flux-RF下载完成')
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://www.modelscope.cn/models/AI-ModelScope/stable-diffusion-3.5-large/resolve/master/sd3.5_large.safetensors -o sd3.5_large.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('sd3.5_large下载完成')
+#subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-%E5%A2%A8%E5%B9%BD%E4%BA%BA%E9%80%A0%E4%BA%BAXL_v2010-Flux-RF.safetensors?ref=main&nonce=1726399393393 -o MYHuman-墨幽人造人XL-v2010-Flux-RF.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('MYHuman-墨幽人造人XL-v2010-Flux-RF下载完成')
+#subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://www.modelscope.cn/models/AI-ModelScope/stable-diffusion-3.5-large/resolve/master/sd3.5_large.safetensors -o sd3.5_large.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('sd3.5_large下载完成')
 
 
-os.chdir(f"/home/xlab-app-center/models/unet") # 模型仓库，unet文件夹
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8原始.safetensors?ref=main&nonce=1725931610381 -o flux1-dev-fp8原始.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('flux1-dev-fp8原始下载完成')
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-F.1-%E5%8E%9F%E5%A2%A8%E5%B9%BD%E9%9A%8F%E6%8B%8D-v1-%E9%9A%8F%E6%8B%8D.safetensors?ref=main&nonce=1726204698330 -o MYHuman-F.1-原墨幽随拍-v1-随拍.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('原墨幽随拍-v1-随拍下载完成')
-subprocess.run('aria2c -c -x 16 -s 16 -k 1M --async-dns=false --check-certificate=false "https://download.openxlab.org.cn/repos/file/mofashi/comfy2/main?filepath=pixelwave_flux1Dev03.safetensors&sign=f145bbad6a3f5271bacd8dd7c3fb219f&nonce=1730166831451" -o pixelwave_flux1Dev03.safetensors', shell=True);print('pixelwave_flux1Dev03风格模型下载完成')
+#os.chdir(f"/home/xlab-app-center/models/unet") # 模型仓库，unet文件夹
+#subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/flux1-dev-fp8原始.safetensors?ref=main&nonce=1725931610381 -o flux1-dev-fp8原始.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('flux1-dev-fp8原始下载完成')
+#subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/MYHuman-F.1-%E5%8E%9F%E5%A2%A8%E5%B9%BD%E9%9A%8F%E6%8B%8D-v1-%E9%9A%8F%E6%8B%8D.safetensors?ref=main&nonce=1726204698330 -o MYHuman-F.1-原墨幽随拍-v1-随拍.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('原墨幽随拍-v1-随拍下载完成')
+#subprocess.run('aria2c -c -x 16 -s 16 -k 1M --async-dns=false --check-certificate=false "https://download.openxlab.org.cn/repos/file/mofashi/comfy2/main?filepath=pixelwave_flux1Dev03.safetensors&sign=f145bbad6a3f5271bacd8dd7c3fb219f&nonce=1730166831451" -o pixelwave_flux1Dev03.safetensors', shell=True);print('pixelwave_flux1Dev03风格模型下载完成')
 
-os.chdir(f"/home/xlab-app-center/models/clip") # clip
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://www.modelscope.cn/models/Comfy-Org/stable-diffusion-3.5-fp8/resolve/master/text_encoders/clip_g.safetensors -o clip_g.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('clip_g下载完成')
+#os.chdir(f"/home/xlab-app-center/models/clip") # clip
+#subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://www.modelscope.cn/models/Comfy-Org/stable-diffusion-3.5-fp8/resolve/master/text_encoders/clip_g.safetensors -o clip_g.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('clip_g下载完成')
 
 
-os.chdir(f"/home/xlab-app-center/models/loras") #模型仓库，lora文件夹
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/%E7%AD%91%E6%A2%A6F.1_INS%E6%BB%A4%E9%95%9C_v1.0.safetensors?ref=main&nonce=1726186206302 -o 筑梦F.1_INS滤镜_v1.0.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('筑梦F.1_INS滤镜下载完成')
+#os.chdir(f"/home/xlab-app-center/models/loras") #模型仓库，lora文件夹
+#subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/%E7%AD%91%E6%A2%A6F.1_INS%E6%BB%A4%E9%95%9C_v1.0.safetensors?ref=main&nonce=1726186206302 -o 筑梦F.1_INS滤镜_v1.0.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('筑梦F.1_INS滤镜下载完成')
 
-os.makedirs("/home/xlab-app-center/models/LLM", exist_ok=True) # 目录不存在则自动创建
-os.chdir(f"/home/xlab-app-center/models/LLM") # 模型仓库，LLM文件夹
+#os.makedirs("/home/xlab-app-center/models/LLM", exist_ok=True) # 目录不存在则自动创建
+#os.chdir(f"/home/xlab-app-center/models/LLM") # 模型仓库，LLM文件夹
 # subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/Florence-2-large-PromptGen-v1.5.safetensors?ref=main&nonce=1727138430530 -o Florence-2-large-PromptGen-v1.5.safetensors",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('Florence-2-large-PromptGen-v1.5下载完成')
 
 #-------------------------------------------------------------
