@@ -93,8 +93,7 @@ os.system(f"git clone {base_url}/mutek/Cryptocat /home/xlab-app-center/custom_no
 os.system(f"git clone {base_url}/stormcenter/ComfyUI-AutoSplitGridImage /home/xlab-app-center/custom_nodes/ComfyUI-AutoSplitGridImage") #一张图的切割，与下面的插件搭配
 os.system(f"git clone {base_url}/kinfolk0117/ComfyUI_GridSwapper /home/xlab-app-center/custom_nodes/ComfyUI_GridSwapper") #网格技术生成的面部一致性保持
 os.system(f"git clone {base_url}/leadbreak/comfyui-faceaging /home/xlab-app-center/custom_nodes/comfyui-faceaging") #年龄变化-50到100岁
-
-os.system(f"git clone https://git.homegu.com/chflame163/ComfyUI_LayerStyle_Advance /home/xlab-app-center/ComfyUI/custom_nodes/ComfyUI_LayerStyle_Advance")
+os.system(f"git clone {base_url}/chflame163/ComfyUI_LayerStyle_Advance /home/xlab-app-center/custom_nodes/ComfyUI_LayerStyle_Advance")
 
 
 
