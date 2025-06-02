@@ -122,20 +122,20 @@ os.system(f"git clone {base_url}/chflame163/ComfyUI_LayerStyle_Advance /home/xla
 
 
 
-# 设置目标目录
-target_dir = '/home/xlab-app-center/ComfyUI/models/lama/'
-source_file_path = os.path.join(target_dir, 'mofashi___comfy', 'big-lama.pt')
-target_file_path = os.path.join(target_dir, 'big-lama.pt')
+# # 设置目标目录
+# target_dir = '/home/xlab-app-center/ComfyUI/models/lama/'
+# source_file_path = os.path.join(target_dir, 'mofashi___comfy', 'big-lama.pt')
+# target_file_path = os.path.join(target_dir, 'big-lama.pt')
 
-# 下载数据集
-download(dataset_repo='mofashi/comfy', source_path='big-lama.pt', target_path=target_dir)
+# # 下载数据集
+# download(dataset_repo='mofashi/comfy', source_path='big-lama.pt', target_path=target_dir)
 
-# 确认下载结果并移动文件
-if os.path.exists(source_file_path):
-    shutil.move(source_file_path, target_file_path)
-    print(f"文件已成功移动到: {target_file_path}")
-else:
-    print("下载的文件不存在，请检查下载过程。")
+# # 确认下载结果并移动文件
+# if os.path.exists(source_file_path):
+#     shutil.move(source_file_path, target_file_path)
+#     print(f"文件已成功移动到: {target_file_path}")
+# else:
+#     print("下载的文件不存在，请检查下载过程。")
 
 
 
@@ -183,8 +183,7 @@ else:
           source_path=file_name, 
           target_path=f'/home/xlab-app-center/models/vae/{file_name}') 
  for file_name in [
-     'ketu_vae_fp16.safetensors', 
-     'flux_vae.safetensors',
+     'flux_vae.safetensors'
  ]]
 # clip模型
 # [download(dataset_repo='mofashi/comfy', 
@@ -403,7 +402,7 @@ os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型�
 
 
 os.makedirs("/home/xlab-app-center/models/lama", exist_ok=True)
-subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://cdn-xlab-data.openxlab.org.cn/objects/344c77bbcb158f17dd143070d1e789f38a66c04202311ae3a258ef66667a9ea9?Expires=1748946483&OSSAccessKeyId=LTAI5tSqABbitQcgeNNd8dAE&Signature=QjZ%2FdhTOfH5Uv70nJBMPp1a95qo%3D&response-content-disposition=attachment%3B%20filename%3D%22big-lama.pt%22&response-content-type=application%2Foctet-stream -o big-lama.pt",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('big-lama.pt下载完成')
+subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://hf-mirror.com/chflame163/ComfyUI_LayerStyle/resolve/main/ComfyUI/models/lama/big-lama.pt?download=true -o big-lama.pt",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('big-lama.pt下载完成')
 
 
 #-------------------------------------------------------------
