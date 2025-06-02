@@ -121,8 +121,7 @@ os.system(f"git clone https://git.homegu.com/chflame163/ComfyUI_LayerStyle_Advan
           source_path=file_name, 
           target_path=f'/home/xlab-app-center/models/unet/{file_name}') 
  for file_name in [
-     'ketu_fp16.safetensors', 
-     'CogVideoX_5b_fun_1_1_GGUF_Q4_0.safetensors'
+     'ketu_fp16.safetensors'
      
  ]]
 # lora
@@ -130,22 +129,22 @@ os.system(f"git clone https://git.homegu.com/chflame163/ComfyUI_LayerStyle_Advan
           source_path=file_name, 
           target_path=f'/home/xlab-app-center/models/loras/{file_name}') 
  for file_name in [
-     'Hyper-FLUX.1-dev-8steps-lora.safetensors', 
-     'xl_99art写实摄影·光影光斑光晕增强.safetensors',
-     '绘梦摄影Flux复古胶片摄影时尚写真电影质感.safetensors',
-     '墨幽-F.1-Lora-网图-MYH-1.1.safetensors',
-     '墨幽Flux-Lora-网图.safetensors',
-     'flux_realism_lora-写实主义.safetensors',
-     'Flux_小红书真实风格.safetensors',
-     '万物调FluxTexture质感增强器06.safetensors',
-     'ASKOLORS可图绘风.safetensors',
-     'ASKOLORS绘本插画风格.safetensors',
-     'kolors国风描金插画.safetensors',
-     'Zenpainting禅意插画08.safetensors',
-     'UIA插画古风山水艺术06.safetensors',
-     'FLUX-Turbo-Alpha.safetensors',
-     '美学艺术Aestheticsart.safetensors',
-     'aidmaFLUXpro1.1-FLUX-V0.2.safetensors'
+     # 'Hyper-FLUX.1-dev-8steps-lora.safetensors', 
+     # 'xl_99art写实摄影·光影光斑光晕增强.safetensors',
+     # '绘梦摄影Flux复古胶片摄影时尚写真电影质感.safetensors',
+     # '墨幽-F.1-Lora-网图-MYH-1.1.safetensors',
+     # '墨幽Flux-Lora-网图.safetensors',
+     # 'flux_realism_lora-写实主义.safetensors',
+     # 'Flux_小红书真实风格.safetensors',
+     # '万物调FluxTexture质感增强器06.safetensors',
+     # 'ASKOLORS可图绘风.safetensors',
+     # 'ASKOLORS绘本插画风格.safetensors',
+     # 'kolors国风描金插画.safetensors',
+     # 'Zenpainting禅意插画08.safetensors',
+     # 'UIA插画古风山水艺术06.safetensors',
+     # 'FLUX-Turbo-Alpha.safetensors',
+     # '美学艺术Aestheticsart.safetensors',
+     # 'aidmaFLUXpro1.1-FLUX-V0.2.safetensors'
  ]]
 # vae
 [download(dataset_repo='mofashi/comfy', 
@@ -154,7 +153,6 @@ os.system(f"git clone https://git.homegu.com/chflame163/ComfyUI_LayerStyle_Advan
  for file_name in [
      'ketu_vae_fp16.safetensors', 
      'flux_vae.safetensors',
-     'CogvideoX-vae.safetensors'
  ]]
 # clip模型
 [download(dataset_repo='mofashi/comfy', 
