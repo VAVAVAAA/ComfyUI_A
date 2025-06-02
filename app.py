@@ -107,6 +107,9 @@ os.system(f"git clone {base_url}/chflame163/ComfyUI_LayerStyle_Advance /home/xla
  for file_name in [
      'big-lama.pt'
  ]]
+# 2. 移动文件到目标位置
+src = '/home/xlab-app-center/ComfyUI/models/lama/mofashi___comfy/big-lama.pt'
+dst = '/home/xlab-app-center/ComfyUI/models/lama/big-lama.pt'
 
 
 # 大模型
