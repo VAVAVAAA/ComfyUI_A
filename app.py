@@ -48,8 +48,6 @@ os.system(f"git clone {base_url}/ty0x2333/ComfyUI-Dev-Utils /home/xlab-app-cente
 os.system(f"git clone {base_url}/AIGODLIKE/AIGODLIKE-ComfyUI-Translation /home/xlab-app-center/custom_nodes/AIGODLIKE-ComfyUI-Translation")
 os.system(f"git clone {base_url}/rgthree/rgthree-comfy /home/xlab-app-center/custom_nodes/rgthree-comfy")
 
-os.system(f"git clone {base_url}/MinusZoneAI/ComfyUI-Kolors-MZ /home/xlab-app-center/custom_nodes/ComfyUI-Kolors-MZ") # 可图
-os.system(f"git clone {base_url}/SeaArtLab/comfyui_storydiffusion /home/xlab-app-center/custom_nodes/comfyui_storydiffusion") # 可图
 #os.system(f"git clone https://git.homegu.com/yolain/ComfyUI-Easy-Use /home/xlab-app-center/custom_nodes/ComfyUI-Easy-Use")
 os.system(f"git clone {base_url}/VAVAVAAA/ComfyUI-Easy-Use-A /home/xlab-app-center/custom_nodes/ComfyUI-Easy-Use-A") # 自己fork仓库的
 #os.system(f"git clone https://git.homegu.com/xinsir6/ControlNetPlus /home/xlab-app-center/custom_nodes/ControlNetPlus") # 全能xl调用
@@ -78,64 +76,21 @@ os.system(f"git clone {base_url}/ssitu/ComfyUI_UltimateSDUpscale /home/xlab-app-
 
 os.system(f"git clone {base_url}/M1kep/ComfyLiterals /home/xlab-app-center/custom_nodes/ComfyLiterals") # 字符串节点
 os.system(f"git clone {base_url}/lquesada/ComfyUI-Inpaint-CropAndStitch /home/xlab-app-center/custom_nodes/ComfyUI-Inpaint-CropAndStitch") # 重绘
-os.system(f"git clone {base_url}/erosDiffusion/ComfyUI-enricos-nodes /home/xlab-app-center/custom_nodes/ComfyUI-enricos-nodes") # 自定义构图
+#os.system(f"git clone {base_url}/erosDiffusion/ComfyUI-enricos-nodes /home/xlab-app-center/custom_nodes/ComfyUI-enricos-nodes") # 自定义构图
 os.system(f"git clone {base_url}/WASasquatch/was-node-suite-comfyui /home/xlab-app-center/custom_nodes/was-node-suite-comfyui") 
 os.system(f"git clone {base_url}/Fannovel16/ComfyUI-Frame-Interpolation /home/xlab-app-center/custom_nodes/ComfyUI-Frame-Interpolation") # 视频补帧
-os.system(f"git clone {base_url}/MinusZoneAI/ComfyUI-CogVideoX-MZ /home/xlab-app-center/custom_nodes/ComfyUI-CogVideoX-MZ") # 图生视频
-os.system(f"git clone {base_url}/kijai/ComfyUI-CogVideoXWrapper /home/xlab-app-center/custom_nodes/ComfyUI-CogVideoXWrapper") # 图生视频，与上面搭配使用
-os.system(f"git clone {base_url}/TTPlanetPig/Comfyui_TTP_Toolset /home/xlab-app-center/custom_nodes/Comfyui_TTP_Toolset") # flux放大
-os.system(f"git clone {base_url}/kijai/ComfyUI-Florence2 /home/xlab-app-center/custom_nodes/ComfyUI-Florence2")
-os.system(f"git clone {base_url}/shiimizu/ComfyUI-PhotoMaker-Plus /home/xlab-app-center/custom_nodes/ComfyUI-PhotoMaker-Plus") # 换脸
-os.system(f"git clone {base_url}/cubiq/ComfyUI_InstantID /home/xlab-app-center/custom_nodes/ComfyUI_InstantID") # 换脸
+
+#os.system(f"git clone {base_url}/TTPlanetPig/Comfyui_TTP_Toolset /home/xlab-app-center/custom_nodes/Comfyui_TTP_Toolset") # flux放大
+#os.system(f"git clone {base_url}/kijai/ComfyUI-Florence2 /home/xlab-app-center/custom_nodes/ComfyUI-Florence2")
+
 os.system(f"git clone {base_url}/crystian/ComfyUI-Crystools /home/xlab-app-center/custom_nodes/ComfyUI-Crystools") # 性能检测
 os.system(f"git clone {base_url}/tatookan/comfuinoda-Navyblue /home/xlab-app-center/custom_nodes/comfuinoda-Navyblue") # sigme分离加细节
 os.system(f"git clone {base_url}/kijai/ComfyUI-FluxTrainer /home/xlab-app-center/custom_nodes/ComfyUI-FluxTrainer") # lora训练
-os.system(f"git clone {base_url}/logtd/ComfyUI-Fluxtapoz /home/xlab-app-center/custom_nodes/ComfyUI-Fluxtapoz") #类风格迁移
 os.system(f"git clone {base_url}/mutek/Cryptocat /home/xlab-app-center/custom_nodes/Cryptocat") #工作流加密
 os.system(f"git clone {base_url}/stormcenter/ComfyUI-AutoSplitGridImage /home/xlab-app-center/custom_nodes/ComfyUI-AutoSplitGridImage") #一张图的切割，与下面的插件搭配
-os.system(f"git clone {base_url}/kinfolk0117/ComfyUI_GridSwapper /home/xlab-app-center/custom_nodes/ComfyUI_GridSwapper") #网格技术生成的面部一致性保持
-os.system(f"git clone {base_url}/leadbreak/comfyui-faceaging /home/xlab-app-center/custom_nodes/comfyui-faceaging") #年龄变化-50到100岁
+
 os.system(f"git clone {base_url}/chflame163/ComfyUI_LayerStyle_Advance /home/xlab-app-center/custom_nodes/ComfyUI_LayerStyle_Advance")
 
-
-
-
-# # ai去水印，lama
-# [download(dataset_repo='mofashi/comfy', 
-#           source_path=file_name, 
-#           target_path=f'/home/xlab-app-center/ComfyUI/models/lama/{file_name}') 
-#  for file_name in [
-#      'big-lama.pt'
-#  ]]
-
-# # 2. 移动文件到目标位置
-# src = '/home/xlab-app-center/ComfyUI/models/lama/big-lama.pt/mofashi___comfy/big-lama.p
-# t'
-# dst = '/home/xlab-app-center/ComfyUI/models/lama/'
-
-# if os.path.exists(src):
-#     os.makedirs(os.path.dirname(dst), exist_ok=True)  # 确保目录存在
-#     shutil.move(src, dst)  # 移动文件
-#     print(f"✅ 文件已移动到: {dst}")
-# else:
-#     print("❌ 文件下载失败，请检查路径！")
-
-
-
-# # 设置目标目录
-# target_dir = '/home/xlab-app-center/ComfyUI/models/lama/'
-# source_file_path = os.path.join(target_dir, 'mofashi___comfy', 'big-lama.pt')
-# target_file_path = os.path.join(target_dir, 'big-lama.pt')
-
-# # 下载数据集
-# download(dataset_repo='mofashi/comfy', source_path='big-lama.pt', target_path=target_dir)
-
-# # 确认下载结果并移动文件
-# if os.path.exists(source_file_path):
-#     shutil.move(source_file_path, target_file_path)
-#     print(f"文件已成功移动到: {target_file_path}")
-# else:
-#     print("下载的文件不存在，请检查下载过程。")
 
 
 
