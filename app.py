@@ -401,7 +401,7 @@ os.chdir(f"/home/xlab-app-center/models/checkpoints") #模型仓库，大模型�
 
 
 os.makedirs("/home/xlab-app-center/models/lama", exist_ok=True) 
-os.chdir("/home/xlab-app-center/models/lama", exist_ok=True)
+os.chdir("/home/xlab-app-center/models/lama")
 subprocess.run("aria2c --console-log-level=error -c -x 16 -s 16 -k 1M --async-dns=false https://code.openxlab.org.cn/api/v1/repos/mofashi/comfy/media/big-lama.pt?ref=main&nonce=1748872214516 -o big-lama.pt",shell=True,stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL);print('big-lama.pt下载完成')
 
 
